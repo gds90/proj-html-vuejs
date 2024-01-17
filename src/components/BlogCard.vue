@@ -14,7 +14,7 @@ export default {
         <div class="imageContainer">
             <img :src="store.blogCards[0].image" alt="Blog News">
         </div>
-        <div class="textContainer">
+        <div class="textContainer p-3">
             <div class="blogCardInfo">
                 <span><img src="/img/icon/clock.png" alt="">{{store.blogCards[0].time}}</span>
                 <span><img src="/img/icon/eye.png" alt="">{{store.blogCards[0].views}}</span>
