@@ -8,6 +8,6 @@ export default {
     
   </div>
 </template>
-<style lang="">
-  
+<style lang="scss">
+@use './assets/styles/generals.scss'
 </style>
