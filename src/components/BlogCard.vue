@@ -24,6 +24,13 @@ export default {
         </div>
     </div>
 </template>
-<style lang="">
-    
+<style lang="scss" scoped>
+@use '../assets/styles/partials/variables' as *;
+
+.blogCardBox {
+    background-color: $colorblue;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    padding: 0;
+}
 </style>
