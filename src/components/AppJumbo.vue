@@ -17,7 +17,7 @@ export default {
 </script>
 
 <template lang="">
-    <div class="jumbotrone">
+    <div class="jumbotrone position-relative">
         <div class="container">
             <div class="row">
                 <div class="col-7">
@@ -41,7 +41,7 @@ export default {
                 </div>
                 <div class="col-5">
                     <div class="img-container">
-                        <img src="../../public/img/index-banner-illus.png" alt="" class="w-100">
+                        <img src="../../public/img/index-banner-illus.png" alt="" class="soldier position-absolute">
 
                     </div>
                 </div>
@@ -76,8 +76,6 @@ export default {
         justify-content: center;
     }
 
-
-
     button {
         background-color: $colorgreen;
         color: $colorblue;
@@ -86,6 +84,10 @@ export default {
     }
 
 
-
+    .soldier {
+        position: relative;
+        top: 0;
+        right: 0;
+    }
 }
 </style>
