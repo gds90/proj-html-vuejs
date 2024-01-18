@@ -445,7 +445,7 @@ export default {
 
     }
 }
-</style>
+
 .bg-black {
     color: $colorblack;
     padding-top: 100px;
