@@ -139,14 +139,109 @@ export default {
         </section>
         <section>
         </section>
-        <section>
+        <section class="banner-discount pb-120 bg-black">
+            <!-- Section 6 Banner Discount start -->
+            <div class="content">
+                <div class="container-fluid">
+                    <div class="row justify-content-center">
+                        <div class="col-10 position-relative overflow-hidden ">
+                            <div class="object">
+                                <img class="obj-1" src="/public/img/banner-item-obj1.png" alt="Banner item">
+                                <img class="obj-2" src="/public/img/banner-item-obj2.png" alt="Banner item" >
+                            </div>
+                            <div class="banner">
+                                <div class="banner-title text-center ">
+                                    <Title :titles="titlesSections[6]" />
+                                </div>
+                                <div class="btn-area text-center ">
+                                    <a href="#" class="btn rounded-5">Get Offers</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Section 6 Banner Discount end -->
         </section>
-        <section>
+        <section class="latest-news pb-120 bg-black ">
+            <!-- Section 7 Latest News start -->
+            <div class="content">
+                <div class="container">
+                    <div class="row justify-content-center align-items-center">
+                        <div class="col-7">
+                            <div class="title text-center ">
+                                <Title :titles="titlesSections[7]" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-5">
+                        <div class="col-6 ">
+                            <BlogCard :news="blogCards[0]"/>
+                        </div>
+                        <div class="col-6">
+                            <BlogCard v-for="news, index in blogCards":news="news" v-show="index !== 0" :class="{ 'd-flex': index !== 0 }"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Section 7 Latest News end -->
         </section>
     </main>
 </template>
 <style lang="scss" scoped>
-@use '../assets/styles/partials/variables';
-@use '../assets/styles/partials/mixins';
-@use '../assets/styles/generals.scss';
+@use '../assets/styles/partials/variables' as *;
+@use '../assets/styles/partials/mixins' as *;
+@use '../assets/styles/generals.scss' as *;
+
+.pb-120 {
+    padding-bottom: 120px;
+}
+
+.object {
+    background-image: url('/public/img/banner-item-bg.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    height: 430px;
+
+    img {
+        width: 250px;
+        position: absolute;
+    }
+
+    .obj-1 {
+        top: 200px;
+    }
+
+    .obj-2 {
+        bottom: 200px;
+        right: 30px
+    }
+}
+
+.banner-title {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.btn-area {
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    .btn {
+        background-color: #1a8f3d;
+        padding: 15px 70px;
+        color: $colorwhite;
+    }
+}
+
+.latest-news {
+    background-color: black;
+    position: relative;
+}
 </style>
