@@ -28,9 +28,9 @@ export default {
                             <Title :titles="titles"/>
                         </div>
                         <div class="bottom mt-3">
-                            <button class="rounded-pill p-3">
+                            <button class="text-uppercase">
                                 explore games
-                                <i class="fa-solid fa-chevron-right"></i>
+                                <i class="ps-2 fa-solid fa-chevron-right"></i>
                                 <i class="fa-solid fa-chevron-right"></i>
                             </button>
                             <a href="" class="p-3 ms-3 bg-light rounded-5">
@@ -77,11 +77,23 @@ export default {
     }
 
     button {
-        background-color: $colorgreen;
-        color: $colorblue;
-        text-transform: uppercase;
+            background-color: $colorgreen;
+            color: $colorblue;
+            border-radius: 25px;
+            font-weight: 600;
+            padding: 10px 20px;
+            font-size: 18px;
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin: 5px;
+            transition: 0.3s all;
 
-    }
+            &:hover {
+                background-color: $colorlime;
+            }
+        }
 
 
     .soldier {
