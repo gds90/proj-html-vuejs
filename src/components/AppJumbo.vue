@@ -42,6 +42,7 @@ export default {
                 <div class="col-5">
                     <div class="img-container">
                         <img src="../../public/img/index-banner-illus.png" alt="" class="w-100">
+                        
                     </div>
                 </div>
             </div>
