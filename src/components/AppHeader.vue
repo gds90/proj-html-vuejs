@@ -72,7 +72,7 @@ header {
 
     button {
         background-color: $colorgreen;
-        color: $colorblue;
+        color: $colorblack;
         border-radius: 25px;
         font-weight: 600;
         padding: 10px 20px;
