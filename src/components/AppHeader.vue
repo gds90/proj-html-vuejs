@@ -38,7 +38,7 @@ export default {
                                 <a href="">
                                     <i class="fa-solid fa-cart-shopping me-4 text-white"></i>
                                 </a>
-                                <button class="rounded-pill p-2">Live Streaming</button>
+                                <button class="text-uppercase">Live Streaming</button>
                             </div>
                         </div>
             
@@ -73,9 +73,20 @@ header {
     button {
         background-color: $colorgreen;
         color: $colorblue;
-        font-size: 22px;
+        border-radius: 25px;
+        font-weight: 600;
+        padding: 10px 20px;
+        font-size: 18px;
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin: 5px;
+        transition: 0.3s all;
+
+        &:hover {
+            background-color: $colorlime;
+        }
     }
-
-
 }
 </style>
