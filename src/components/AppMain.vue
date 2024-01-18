@@ -216,6 +216,7 @@ export default {
         </section>
         <section>
         </section>
+        <!-- Section 3 -->
         <section class='bg-black'>
             <div class="text-center">
                 <div class="container visibility">
@@ -251,7 +252,38 @@ export default {
                 </div>
             </div>
         </section>
-        <section>
+        <!-- section 4 -->
+        <section class='background-section-4'>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center py-5">
+                        <Title :titles="titlesSections[4]"/>
+                    </div>
+                    <div class="col-12 d-flex justify-content-center">
+                        <div class="img-container">
+                            <img src="/public/img/video-bg.png" alt="">
+                            <div>
+                                <button type="button" class="btn btn-warning"><img src="/img/icon/live-icon.png" alt=""> live</button>
+                            </div>
+                            <div class='number-area'>
+                                <span>234,567</span> viewers <span>14,510</span> like
+                            </div>
+                            <div class="title-area">
+                                <h3>League of Legends</h3>
+                            </div>
+                            <div class="circle-area">
+                                <div class="play-area">
+                                    <a href="#">
+                                        <img src="/img/icon/play-icon.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
         <section>
         </section>
@@ -452,6 +484,7 @@ export default {
     padding-bottom: 120px;
 }
 
+
 .box-random {
     @include box-random;
     color: $colorwhite;
@@ -461,5 +494,87 @@ export default {
         font-size: 16px;
         font-weight: 300;
     }
+}
+
+.background-section-4 {
+    background-color: black;
+    background-image: url('/public/img/live-streaming-bg.png');
+    background-repeat: no-repeat;
+
+    .img-container {
+        width: 80%;
+        position: relative;
+
+        img {
+            width: 100%;
+        }
+
+        button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 25px;
+
+            img {
+                padding: 5px;
+            }
+
+        }
+
+        /* .circle-area {
+            border: #1a8f3d 1px solid;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 70px;
+            height: 70px;
+        } */
+
+        .play-area {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+
+
+            a {
+
+                img {
+                    padding: 30px;
+                    background-color: $colorwhite;
+                    border-radius: 50%;
+                }
+            }
+
+        }
+
+        .number-area {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            color: $colorwhite;
+
+            span {
+                color: $colorlime
+            }
+        }
+
+        .title-area {
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%);
+            color: $colorwhite;
+
+        }
+
+    }
+
 }
 </style>
