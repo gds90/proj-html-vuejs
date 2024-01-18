@@ -4,6 +4,7 @@ import Title from './Title.vue';
 import BlogCard from './BlogCard.vue';
 import AppBattleCard from './AppBattleCard.vue';
 import AppJumbo from './AppJumbo.vue';
+import FeedbackCard from './FeedbackCard.vue'
 export default {
     data() {
         return {
@@ -89,8 +90,8 @@ export default {
                     text_2: 'Twitch',
                     icon_youtube: '../public/img/icon/youtube-icon.png',
                     icon_twitch: '../public/img/icon/twitch-icon.png',
-                    title:'Call Of Deauty',
-                    time:'December 25, 2022 4:00 PM'
+                    title: 'Call Of Deauty',
+                    time: 'December 25, 2022 4:00 PM'
                 },
                 {
                     player1: '../public/img/game-img-3.png',
@@ -100,8 +101,8 @@ export default {
                     text_2: 'Twitch',
                     icon_youtube: '../public/img/icon/youtube-icon.png',
                     icon_twitch: '../public/img/icon/twitch-icon.png',
-                    title:'Legendary Battles',
-                    time:'December 25, 2022 4:00 PM'
+                    title: 'Legendary Battles',
+                    time: 'December 25, 2022 4:00 PM'
                 },
                 {
                     player1: '../public/img/game-img-5.png',
@@ -111,8 +112,8 @@ export default {
                     text_2: 'Twitch',
                     icon_youtube: '../public/img/icon/youtube-icon.png',
                     icon_twitch: '../public/img/icon/twitch-icon.png',
-                    title:'Nay Corral Gundown',
-                    time:'December 25, 2022 4:00 PM'
+                    title: 'Nay Corral Gundown',
+                    time: 'December 25, 2022 4:00 PM'
                 },
                 {
                     player1: '../public/img/game-img-7.png',
@@ -122,8 +123,8 @@ export default {
                     text_2: 'Twitch',
                     icon_youtube: '../public/img/icon/youtube-icon.png',
                     icon_twitch: '../public/img/icon/twitch-icon.png',
-                    title:'League Of Legends',
-                    time:'December 25, 2022 4:00 PM'
+                    title: 'League Of Legends',
+                    time: 'December 25, 2022 4:00 PM'
                 }
             ]
         }
@@ -132,7 +133,8 @@ export default {
         Title,
         BlogCard,
         AppBattleCard,
-        AppJumbo
+        AppJumbo,
+        FeedbackCard
     },
     methods: {
         GenerateRandomMajorNumber() {
@@ -293,8 +295,22 @@ export default {
                 </div>
             </div>
         </section>
-        <section>
+        <!-- Section 5: Feedback - Start -->
+        <section class="testimonials pt-120">
+            <div class="container">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-7">
+                        <div class="feedback-header text-center">
+                            <Title :titles="titlesSections[5]" />
+                        </div>
+                        <div class="feedback-card d-flex justify-content-center">
+                            <FeedbackCard />
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
+        <!-- Section 5: End -->
         <section class="banner-discount pb-120 bg-black">
             <!-- Section 6 Banner Discount start -->
             <div class="content">
@@ -351,6 +367,10 @@ export default {
 
 .pb-120 {
     padding-bottom: 120px;
+}
+
+.pt-120 {
+    padding-top: 120px;
 }
 
 .object {
@@ -420,6 +440,7 @@ export default {
 
         .text-box {
             color: $colorwhite;
+
             p {
                 font-family: $font_style;
             }
@@ -589,5 +610,13 @@ export default {
 
     }
 
+}
+
+.testimonials {
+    background-color: $colorblack;
+
+    .feedback-header {
+        margin-bottom: 55px;
+    }
 }
 </style>

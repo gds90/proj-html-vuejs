@@ -36,7 +36,7 @@ export default {
             <i class="fas fa-star"></i>
             <i class="fas fa-star"></i>
         </div>
-        <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.”</p>
+        <p class="review">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.”</p>
         <div class="user d-flex gap-3 align-content-center">
             <div class="user-img d-flex align-items-center">
                 <img :src="rate.profileimg" :alt="rate.name" class="img-fluid">
@@ -62,19 +62,20 @@ export default {
     background-color: $colorblue;
     padding: 34px 40px;
     margin: 0 10px;
-    width: 432px;
+    width: 412px;
 
     p,
     h6 {
         color: white;
     }
 
-    p {
-        font-size: 25px;
+    .review {
+        font-size: 19px;
+        line-height: 36px;
     }
 
     h6 {
-        font-size: 25px;
+        font-size: 18px;
     }
 
     img {
@@ -84,7 +85,7 @@ export default {
 
     .user-data p {
         color: $colorlime;
-        font-size: 18px;
+        font-size: 15px;
     }
 }
 </style>
