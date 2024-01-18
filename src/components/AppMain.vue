@@ -139,7 +139,7 @@ export default {
         </section>
         <section>
         </section>
-        <section class="banner-discount">
+        <section class="banner-discount pb-120 bg-black">
             <!-- Section 6 Banner Discount start -->
             <div class="content">
                 <div class="container-fluid">
@@ -150,7 +150,7 @@ export default {
                                 <img class="obj-2" src="/public/img/banner-item-obj2.png" alt="Banner item" >
                             </div>
                             <div class="banner">
-                                <div class="title text-center ">
+                                <div class="banner-title text-center ">
                                     <Title :titles="titlesSections[6]" />
                                 </div>
                                 <div class="btn-area text-center ">
@@ -163,7 +163,28 @@ export default {
             </div>
             <!-- Section 6 Banner Discount end -->
         </section>
-        <section>
+        <section class="latest-news pb-120 bg-black ">
+            <!-- Section 7 Latest News start -->
+            <div class="content">
+                <div class="container">
+                    <div class="row justify-content-center align-items-center">
+                        <div class="col-7">
+                            <div class="title text-center ">
+                                <Title :titles="titlesSections[7]" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-5">
+                        <div class="col-6 ">
+                            <BlogCard :news="blogCards[0]"/>
+                        </div>
+                        <div class="col-6">
+                            <BlogCard v-for="news, index in blogCards":news="news" v-show="index !== 0" :class="{ 'd-flex': index !== 0 }"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Section 7 Latest News end -->
         </section>
     </main>
 </template>
@@ -171,6 +192,10 @@ export default {
 @use '../assets/styles/partials/variables' as *;
 @use '../assets/styles/partials/mixins' as *;
 @use '../assets/styles/generals.scss' as *;
+
+.pb-120 {
+    padding-bottom: 120px;
+}
 
 .object {
     background-image: url('/public/img/banner-item-bg.png');
@@ -195,7 +220,7 @@ export default {
     }
 }
 
-.title {
+.banner-title {
     position: absolute;
     top: 40%;
     left: 50%;
@@ -213,5 +238,10 @@ export default {
         padding: 15px 70px;
         color: $colorwhite;
     }
+}
+
+.latest-news {
+    background-color: black;
+    position: relative;
 }
 </style>
