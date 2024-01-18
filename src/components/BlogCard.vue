@@ -34,25 +34,6 @@ export default {
         </div>
     </div>
 </div>
-        <!-- <div class="col-6">
-            <div class="blogCardBox" v-for="(news, index) in store.blogCards" :key="index">
-                <div v-if="index !== 0" class="d-flex ">
-                    <div class="imageContainer">
-                        <img :src="news.image" alt="Blog News">
-                    </div>
-                    <div class="textContainer p-3">
-                        <div class="blogCardInfo">
-                            <div class="infoNews d-flex">
-                                <span><img src="/img/icon/clock.png" alt="">{{news.time}}</span>
-                                <span><img src="/img/icon/eye.png" alt="">{{news.views}}</span>
-                                <span><img src="/img/icon/calendar.png" alt="">{{news.date}}</span>
-                            </div>
-                            <h5>{{news.title}}</h5>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
 </template>
 <style lang="scss" scoped>
 @use '../assets/styles/partials/variables' as *;
