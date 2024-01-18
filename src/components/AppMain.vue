@@ -125,7 +125,17 @@ export default {
         BlogCard,
         AppBattleCard,
         AppJumbo
-    }
+    },
+    methods: {
+        GenerateRandomMajorNumber() {
+            let number = Math.floor(Math.random() * 3001) + 2000;
+            return number
+        },
+        GenerateRandomMinorNumber() {
+            let number = Math.floor(Math.random() * 250) + 100;
+            return number
+        }
+    },
 }
 </script>
 <template lang="">
@@ -206,7 +216,40 @@ export default {
         </section>
         <section>
         </section>
-        <section>
+        <section class='bg-black'>
+            <div class="text-center">
+                <div class="container visibility">
+                    <div class="row">
+                        <div class="col-12 pb-5">
+                            <Title :titles='titlesSections[3]'/>
+                        </div>
+                        <div class='col-3'>
+                            <div class="box-random">
+                                {{GenerateRandomMajorNumber()}}
+                                <div class='text-green'>Twitch Streams</div>
+                            </div>
+                        </div>
+                        <div class='col-3'>
+                            <div class="box-random">
+                                {{GenerateRandomMinorNumber()}}
+                                <div class='text-green'>Total Games</div>
+                            </div>
+                        </div>
+                        <div class='col-3'>
+                            <div class="box-random">
+                                {{GenerateRandomMajorNumber()}}
+                                <div class='text-green'>Youtube Streams</div>
+                            </div>
+                        </div>
+                        <div class='col-3'>
+                            <div class="box-random">
+                                {{GenerateRandomMinorNumber()}}
+                                <div class='text-green'>Pro Team</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
         <section>
         </section>
@@ -401,4 +444,22 @@ export default {
         }
 
     }
-}</style>
+}
+</style>
+.bg-black {
+    color: $colorblack;
+    padding-top: 100px;
+    padding-bottom: 120px;
+}
+
+.box-random {
+    @include box-random;
+    color: $colorwhite;
+
+    .text-green {
+        color: $colorlime;
+        font-size: 16px;
+        font-weight: 300;
+    }
+}
+</style>
