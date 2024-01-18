@@ -145,6 +145,8 @@ export default {
         </section>
     </main>
 </template>
-<style lang="">
-    
+<style lang="scss" scoped>
+@use '../assets/styles/partials/variables';
+@use '../assets/styles/partials/mixins';
+@use '../assets/styles/generals.scss';
 </style>
