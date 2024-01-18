@@ -14,9 +14,9 @@ export default {
 </script>
 <template lang="">
     <div>
-        <h5>{{titles.section}}</h5>
-        <h1>{{titles.title}}</h1>
-        <p>{{titles.subtitle}}</p>
+        <h5 v-show= 'titles.section !== ""'>{{titles.section}}</h5>
+        <h1 v-show= 'titles.title !== ""'>{{titles.title}}</h1>
+        <p v-show= 'titles.subtitle !== ""'>{{titles.subtitle}}</p>
     </div>
 </template>
 <style lang="scss" scoped>
@@ -32,4 +32,5 @@ h1 {
 
 p {
     color: $colorpanna;
-}</style>
+}
+</style>
