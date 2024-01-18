@@ -42,7 +42,7 @@ export default {
                 <div class="col-5">
                     <div class="img-container">
                         <img src="../../public/img/index-banner-illus.png" alt="" class="w-100">
-                        
+
                     </div>
                 </div>
             </div>
@@ -58,10 +58,11 @@ export default {
     background-image: url('../../public/img/index-banner-bg.png');
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    height: 100vh;
+    background-size: cover;
 
     .row {
         padding-top: 100px;
