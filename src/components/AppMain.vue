@@ -189,7 +189,6 @@ export default {
                 </div>
             </div>
         </section>
-
         <!-- SECTION 2 -->
         <section class="background-section-2">
             <div class="container">
