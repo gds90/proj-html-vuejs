@@ -24,6 +24,11 @@ export default {
                     subtitle: 'libero malesuada feugiat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Cras ultricies ligula sed magna dictum porta.'
                 },
                 {
+                    section: '',
+                    title: 'Futio Quick Facts',
+                    subtitle: ''
+                },
+                {
                     section: 'Live Streaming',
                     title: 'Watch The Streams',
                     subtitle: 'libero malesuada feugiat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Cras ultricies ligula sed magna dictum porta.'
@@ -32,6 +37,11 @@ export default {
                     section: 'Futio Feedback',
                     title: 'What Our Gamers Say',
                     subtitle: 'libero malesuada feugiat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Cras ultricies ligula sed magna dictum porta.'
+                },
+                {
+                    section: 'Make Offer',
+                    title: 'Get 70% Offer Discount',
+                    subtitle: ''
                 },
                 {
                     section: 'Latest News',
@@ -120,7 +130,6 @@ export default {
 <template lang="">
     <main>
         <section>
-            <Title :titles="titlesSections[1]"/>
         </section>
         <section>
         </section>
