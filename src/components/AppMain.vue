@@ -88,7 +88,9 @@ export default {
                     text_1: 'Youtube',
                     text_2: 'Twitch',
                     icon_youtube: '../public/img/icon/youtube-icon.png',
-                    icon_twitch: '../public/img/icon/twitch-icon.png'
+                    icon_twitch: '../public/img/icon/twitch-icon.png',
+                    title: 'Call Of Deauty',
+                    time: 'December 25, 2022 4:00 PM'
                 },
                 {
                     player1: '../public/img/game-img-3.png',
@@ -97,7 +99,9 @@ export default {
                     text_1: 'Youtube',
                     text_2: 'Twitch',
                     icon_youtube: '../public/img/icon/youtube-icon.png',
-                    icon_twitch: '../public/img/icon/twitch-icon.png'
+                    icon_twitch: '../public/img/icon/twitch-icon.png',
+                    title: 'Legendary Battles',
+                    time: 'December 25, 2022 4:00 PM'
                 },
                 {
                     player1: '../public/img/game-img-5.png',
@@ -106,7 +110,9 @@ export default {
                     text_1: 'Youtube',
                     text_2: 'Twitch',
                     icon_youtube: '../public/img/icon/youtube-icon.png',
-                    icon_twitch: '../public/img/icon/twitch-icon.png'
+                    icon_twitch: '../public/img/icon/twitch-icon.png',
+                    title: 'Nay Corral Gundown',
+                    time: 'December 25, 2022 4:00 PM'
                 },
                 {
                     player1: '../public/img/game-img-7.png',
@@ -115,7 +121,9 @@ export default {
                     text_1: 'Youtube',
                     text_2: 'Twitch',
                     icon_youtube: '../public/img/icon/youtube-icon.png',
-                    icon_twitch: '../public/img/icon/twitch-icon.png'
+                    icon_twitch: '../public/img/icon/twitch-icon.png',
+                    title: 'League Of Legends',
+                    time: 'December 25, 2022 4:00 PM'
                 }
             ]
         }
@@ -129,10 +137,78 @@ export default {
 </script>
 <template lang="">
     <main>
-        <section>
+
+        <!-- SECTION 1 -->
+        <section class="background-section-1">
+            <div class="container">
+                <div class="row">
+                    <!-- IMG -->
+                    <div class="col-6 direction d-flex justify-content-start">
+                        <img class="img-max" src="/img/features-illus.png" alt="">
+                    </div>
+                    <!-- TEXT -->
+                    <div class="col-6 ps-4 d-flex flex-column">
+                        <div class="section-text">
+                            <Title :titles="titlesSections[1]"/>
+                        </div>
+                        <div class="section-box">
+                            <div class="img-box">
+                                <img src="/img/icon/features-icon-1.png" alt="icon">
+                            </div>
+                            <div class="text-box">
+                                <h3>Live Streaming</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labor.</p>
+                            </div>
+                        </div>
+                        <div class="section-box">
+                            <div class="img-box">
+                                <img src="/img/icon/features-icon-2.png" alt="icon">
+                            </div>
+                            <div class="text-box">
+                                <h3>Great Tournament</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labor.</p>
+                            </div>
+                        </div>
+                        <div class="section-box">
+                            <div class="img-box">
+                                <img src="/img/icon/features-icon-3.png" alt="icon">
+                            </div>
+                            <div class="text-box">
+                                <h3>Gaming News</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labor.</p>
+                            </div>
+                        </div>
+                        <div class="btn-box pt-5">
+                            <button class="text-uppercase">
+                                Play Now
+                                <i class="ps-2 fa-solid fa-chevron-right"></i>
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
-        <section>
+
+        <!-- SECTION 2 -->
+        <section class="background-section-2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center py-5">
+                        <Title :titles="titlesSections[2]"/>
+                    </div>
+                    <AppBattleCard v-for="battle, index in battleCards" :key="index" :battle="battle" />
+                    <div class="btn-box pt-5">
+                        <button class="text-uppercase">
+                            view all match
+                            <i class="ps-2 fa-solid fa-chevron-right"></i>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
         </section>
+
         <section>
         </section>
         <section>
@@ -146,7 +222,92 @@ export default {
     </main>
 </template>
 <style lang="scss" scoped>
-@use '../assets/styles/partials/variables';
-@use '../assets/styles/partials/mixins';
-@use '../assets/styles/generals.scss';
+@use '../assets/styles/partials/variables' as *;
+@use '../assets/styles/partials/mixins' as *;
+@use '../assets/styles/generals.scss' as *;
+
+    .background-section-1 {
+        background-color: $colorblack;
+        padding-top: 100px;
+
+        .direction {
+            direction: rtl;
+            .img-max {
+                max-width: unset;
+            }
+        }
+
+        .section-box {
+            display: flex;
+            gap: 30px;
+            padding-top: 20px;
+
+            .text-box {
+                color: $colorwhite;
+            }
+
+            .img-box {
+                max-width: unset;
+            }
+        }
+
+        .btn-box {
+            button{
+                background-color: $colorgreen;
+                color: $colorblue;
+                border-radius: 25px;
+                font-weight: 600;
+                padding: 10px 20px;
+                font-size: 18px;
+                position: relative;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                margin: 5px;
+                transition: 0.3s all;
+
+                &:hover {
+                    background-color: $colorlime;
+                }
+            }
+
+        }
+
+    }
+
+    .background-section-2 {
+        background-color: #222833;
+        padding: 90px 0;
+        .box-battle-card {
+            width: calc(100% / 2 - 20px);
+            margin: 10px;
+        }
+
+        .btn-box {
+            display: flex;
+            justify-content: center;
+            button{
+                background-color: $colorgreen;
+                color: $colorblue;
+                border-radius: 25px;
+                font-weight: 600;
+                padding: 10px 20px;
+                font-size: 18px;
+                position: relative;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                margin: 5px;
+                transition: 0.3s all;
+
+                &:hover {
+                    background-color: $colorlime;
+                }
+            }
+
+        }
+    }
+
+
+
 </style>
