@@ -124,7 +124,17 @@ export default {
         Title,
         BlogCard,
         AppBattleCard
-    }
+    },
+    methods: {
+        GenerateRandomMajorNumber() {
+            let number = Math.floor(Math.random() * 3001) + 2000;
+            return number
+        },
+        GenerateRandomMinorNumber() {
+            let number = Math.floor(Math.random() * 250) + 100;
+            return number
+        }
+    },
 }
 </script>
 <template lang="">
@@ -133,7 +143,43 @@ export default {
         </section>
         <section>
         </section>
-        <section>
+        <section class='bg-black'>
+            <div class="content text-center">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <Title :titles='titlesSections[3]'/>
+                        </div>
+                        <div class='col-3'>
+                            <div class="box-random">
+                                {{GenerateRandomMajorNumber()}}
+                                <div class='text-green'>Twitch Streams</div>
+                            </div>
+                        </div>
+                        <div class='col-3'>
+                            <div class="box-random">
+                                {{GenerateRandomMinorNumber()}}
+                                <div class='text-green'>Twitch Streams</div>
+                            </div>
+                        </div>
+                        <div class='col-3'>
+                            <div class="box-random">
+                                {{GenerateRandomMajorNumber()}}
+                                <div class='text-green'>Twitch Streams</div>
+                            </div>
+                        </div>
+                        <div class='col-3'>
+                            <div class="box-random">
+                                {{GenerateRandomMinorNumber()}}
+                                <div class='text-green'>Twitch Streams</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+
         </section>
         <section>
         </section>
@@ -146,7 +192,25 @@ export default {
     </main>
 </template>
 <style lang="scss" scoped>
-@use '../assets/styles/partials/variables';
-@use '../assets/styles/partials/mixins';
-@use '../assets/styles/generals.scss';
+@use '../assets/styles/partials/variables' as *;
+@use '../assets/styles/partials/mixins' as *;
+@use '../assets/styles/generals.scss' as *;
+
+.bg-black {
+    color: $colorblack;
+}
+
+.box-random {
+    font-size: 60px;
+    font-weight: 700;
+    border: 1px solid white;
+    color: $colorwhite;
+    border-radius: 25%;
+    padding: 50px 0 50px 0;
+
+    .text-green {
+        color: $colorlime;
+        font-size: 16px;
+    }
+}
 </style>
