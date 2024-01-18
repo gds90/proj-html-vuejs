@@ -3,7 +3,7 @@
 import Title from './Title.vue';
 import BlogCard from './BlogCard.vue';
 import AppBattleCard from './AppBattleCard.vue';
-
+import AppJumbo from './AppJumbo.vue';
 export default {
     data() {
         return {
@@ -123,12 +123,17 @@ export default {
     components: {
         Title,
         BlogCard,
-        AppBattleCard
+        AppBattleCard,
+        AppJumbo
     }
 }
 </script>
 <template lang="">
     <main>
+        <section>
+
+            <AppJumbo :titles= "titlesSections[0]"/>
+        </section>
         <section>
         </section>
         <section>
