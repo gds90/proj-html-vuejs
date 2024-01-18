@@ -144,10 +144,10 @@ export default {
         <section>
         </section>
         <section class='bg-black'>
-            <div class="content text-center">
-                <div class="container">
+            <div class="text-center">
+                <div class="container visibility">
                     <div class="row">
-                        <div class="col-12">
+                        <div class="col-12 pb-5">
                             <Title :titles='titlesSections[3]'/>
                         </div>
                         <div class='col-3'>
@@ -159,27 +159,24 @@ export default {
                         <div class='col-3'>
                             <div class="box-random">
                                 {{GenerateRandomMinorNumber()}}
-                                <div class='text-green'>Twitch Streams</div>
+                                <div class='text-green'>Total Games</div>
                             </div>
                         </div>
                         <div class='col-3'>
                             <div class="box-random">
                                 {{GenerateRandomMajorNumber()}}
-                                <div class='text-green'>Twitch Streams</div>
+                                <div class='text-green'>Youtube Streams</div>
                             </div>
                         </div>
                         <div class='col-3'>
                             <div class="box-random">
                                 {{GenerateRandomMinorNumber()}}
-                                <div class='text-green'>Twitch Streams</div>
+                                <div class='text-green'>Pro Team</div>
                             </div>
                         </div>
                     </div>
                 </div>
-                
             </div>
-            
-
         </section>
         <section>
         </section>
@@ -198,19 +195,18 @@ export default {
 
 .bg-black {
     color: $colorblack;
+    padding-top: 100px;
+    padding-bottom: 120px;
 }
 
 .box-random {
-    font-size: 60px;
-    font-weight: 700;
-    border: 1px solid white;
+    @include box-random;
     color: $colorwhite;
-    border-radius: 25%;
-    padding: 50px 0 50px 0;
 
     .text-green {
         color: $colorlime;
         font-size: 16px;
+        font-weight: 300;
     }
 }
 </style>
