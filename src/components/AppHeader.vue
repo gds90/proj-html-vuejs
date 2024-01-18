@@ -4,15 +4,27 @@ export default {
     data() {
         name: 'AppHeader'
         return {
+            isHeaderFixed: false,
             navBarLinks: ['Home', 'Games', 'Shop', 'Pages', 'Blog', 'Contact'],
         }
     },
-
+    mounted() {
+        window.addEventListener('scroll', this.handleScroll);
+    },
+        beforeDestroy() {
+        window.removeEventListener('scroll', this.handleScroll);
+    },
+    methods: {
+        handleScroll() {
+        const scroll = window.scrollY;
+        this.isHeaderFixed = scroll >= 60;
+    },
+  },
 }
 </script>
 
 <template lang="">
-    <header>
+    <header :class="{ 'fixed': isHeaderFixed }">
         <div class="container">
             <div class="row">
                 <div class="col">
@@ -58,10 +70,22 @@ header {
     z-index: 999;
     width: 100%;
     padding: 20px;
-    position: fixed;
+    position: absolute;
 
-
-
+    &.fixed {
+        background-color: rgb(28,34,45);
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        width: 100%;
+        box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.3);
+        transition: all 0.5s;
+        animation-duration: 1s;
+        animation-fill-mode: both;
+        animation-name: fadeInDown;
+    }
 
     a {
         text-decoration: none;
