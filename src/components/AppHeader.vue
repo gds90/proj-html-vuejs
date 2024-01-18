@@ -55,7 +55,6 @@ export default {
 
 header {
     background-color: $colorblue;
-    position: fixed;
     z-index: 999;
     width: 100%;
     padding: 20px;

@@ -3,7 +3,7 @@
 import { store } from '../store';
 
 export default {
-    name:'AppBattleCard',
+    name: 'AppBattleCard',
     data() {
         return {
             store
@@ -43,20 +43,21 @@ export default {
     </div>
 </template>
 <style lang="scss" scoped>
-    @use '../assets/styles/generals.scss' as *;
-    @use '../assets/styles/partials/variables' as *;
+@use '../assets/styles/generals.scss' as *;
+@use '../assets/styles/partials/variables' as *;
 
-    .box-battle-card {
-        width: calc(100% / 2 - 20px);
-        margin: 10px;
-        .card-header, .card-footer {
-            background-color: #273448;
-        }
-    
-        .card-body {
-            color: $colorwhite;
-            background-color: $colorblue;
-        }
+.box-battle-card {
+    width: calc(100% / 2 - 20px);
+    margin: 10px;
+
+    .card-header,
+    .card-footer {
+        background-color: #273448;
     }
 
+    .card-body {
+        color: $colorwhite;
+        background-color: $colorblue;
+    }
+}
 </style>

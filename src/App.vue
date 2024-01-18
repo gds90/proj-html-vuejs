@@ -1,16 +1,13 @@
 <script>
-import BlogCard from './components/BlogCard.vue';
-import AppBattleCard from './components/AppBattleCard.vue';
-import Title from './components/Title.vue';
+
 import { store } from './store.js';
 import AppHeader from './components/AppHeader.vue';
+import AppMain from './components/AppMain.vue';
 
 export default {
   components: {
-    AppBattleCard,
-    BlogCard,
-    Title,
-    AppHeader
+    AppHeader,
+    AppMain
   },
   data() {
     return {
@@ -22,9 +19,7 @@ export default {
 <template lang="">
   <div>
     <AppHeader />
-    <AppBattleCard />
-    <BlogCard/>
-    <Title />
+    <AppMain />
   </div>
 </template>
 <style lang="scss">

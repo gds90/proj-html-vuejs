@@ -1,13 +1,141 @@
-<template lang="">
-    <div>
-        
-    </div>
-</template>
-<script>
-export default {
 
+<script>
+import Title from './Title.vue';
+import BlogCard from './BlogCard.vue';
+import AppBattleCard from './AppBattleCard.vue';
+
+export default {
+    data() {
+        return {
+            titlesSections: [
+                {
+                    section: 'Game With Live Stearming',
+                    title: 'Future Of Esports',
+                    subtitle: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium'
+                },
+                {
+                    section: 'The Ultimate Competitive Gaming Platfrom',
+                    title: 'Make Your Mark On The Battle Field',
+                    subtitle: 'libero malesuada feugiat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Cras ultricies ligula sed magna dictum porta.'
+                },
+                {
+                    section: 'Trending Battle',
+                    title: 'Keep Eyes & Manage Upcoming Battle',
+                    subtitle: 'libero malesuada feugiat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Cras ultricies ligula sed magna dictum porta.'
+                },
+                {
+                    section: 'Live Streaming',
+                    title: 'Watch The Streams',
+                    subtitle: 'libero malesuada feugiat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Cras ultricies ligula sed magna dictum porta.'
+                },
+                {
+                    section: 'Futio Feedback',
+                    title: 'What Our Gamers Say',
+                    subtitle: 'libero malesuada feugiat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Cras ultricies ligula sed magna dictum porta.'
+                },
+                {
+                    section: 'Latest News',
+                    title: 'Stay Updated With Our Latest News Articles',
+                    subtitle: 'libero malesuada feugiat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Cras ultricies ligula sed magna dictum porta.'
+                },
+            ],
+            blogCards: [
+
+                {
+                    image: '/img/blog-item-1.png',
+                    time: '10 min',
+                    views: '240',
+                    date: 'Apr 11, 2022',
+                    title: 'Secrets To An Amazing Role Playing Game'
+                },
+                {
+                    image: '/img/blog-item-2.png',
+                    time: '10 min',
+                    views: '240',
+                    date: 'Apr 11, 2022',
+                    title: 'Top 5 Most Important Aspects Of Your Game'
+                },
+                {
+                    image: '/img/blog-item-3.png',
+                    time: '10 min',
+                    views: '240',
+                    date: 'Apr 11, 2022',
+                    title: 'The Rise Of Fantasy Sports And Online Games'
+                },
+                {
+                    image: '/img/blog-item-4.png',
+                    time: '10 min',
+                    views: '240',
+                    date: 'Apr 11, 2022',
+                    title: 'Benefits Of Gaming - PC And Video Games'
+                },
+            ],
+            battleCards: [
+                {
+                    player1: '../public/img/game-img-1.png',
+                    vs: '../public/img/verus-icon.png',
+                    player2: '../public/img/game-img-2.png',
+                    text_1: 'Youtube',
+                    text_2: 'Twitch',
+                    icon_youtube: '../public/img/icon/youtube-icon.png',
+                    icon_twitch: '../public/img/icon/twitch-icon.png'
+                },
+                {
+                    player1: '../public/img/game-img-3.png',
+                    vs: '../public/img/verus-icon.png',
+                    player2: '../public/img/game-img-4.png',
+                    text_1: 'Youtube',
+                    text_2: 'Twitch',
+                    icon_youtube: '../public/img/icon/youtube-icon.png',
+                    icon_twitch: '../public/img/icon/twitch-icon.png'
+                },
+                {
+                    player1: '../public/img/game-img-5.png',
+                    vs: '../public/img/verus-icon.png',
+                    player2: '../public/img/game-img-6.png',
+                    text_1: 'Youtube',
+                    text_2: 'Twitch',
+                    icon_youtube: '../public/img/icon/youtube-icon.png',
+                    icon_twitch: '../public/img/icon/twitch-icon.png'
+                },
+                {
+                    player1: '../public/img/game-img-7.png',
+                    vs: '../public/img/verus-icon.png',
+                    player2: '../public/img/game-img-8.png',
+                    text_1: 'Youtube',
+                    text_2: 'Twitch',
+                    icon_youtube: '../public/img/icon/youtube-icon.png',
+                    icon_twitch: '../public/img/icon/twitch-icon.png'
+                }
+            ]
+        }
+    },
+    components: {
+        Title,
+        BlogCard,
+        AppBattleCard
+    }
 }
 </script>
+<template lang="">
+    <main>
+        <section>
+            <Title :titles="titlesSections[1]"/>
+        </section>
+        <section>
+        </section>
+        <section>
+        </section>
+        <section>
+        </section>
+        <section>
+        </section>
+        <section>
+        </section>
+        <section>
+        </section>
+    </main>
+</template>
 <style lang="">
     
 </style>
