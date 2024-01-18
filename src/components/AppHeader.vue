@@ -71,6 +71,7 @@ header {
     }
 
     button {
+        font-family: $font_style;
         background-color: $colorgreen;
         color: $colorblack;
         border-radius: 25px;

@@ -31,6 +31,7 @@ h1 {
 }
 
 p {
+    font-family: $font_style;
     color: $colorpanna;
 }
 </style>

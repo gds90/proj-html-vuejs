@@ -88,7 +88,9 @@ export default {
                     text_1: 'Youtube',
                     text_2: 'Twitch',
                     icon_youtube: '../public/img/icon/youtube-icon.png',
-                    icon_twitch: '../public/img/icon/twitch-icon.png'
+                    icon_twitch: '../public/img/icon/twitch-icon.png',
+                    title:'Call Of Deauty',
+                    time:'December 25, 2022 4:00 PM'
                 },
                 {
                     player1: '../public/img/game-img-3.png',
@@ -97,7 +99,9 @@ export default {
                     text_1: 'Youtube',
                     text_2: 'Twitch',
                     icon_youtube: '../public/img/icon/youtube-icon.png',
-                    icon_twitch: '../public/img/icon/twitch-icon.png'
+                    icon_twitch: '../public/img/icon/twitch-icon.png',
+                    title:'Legendary Battles',
+                    time:'December 25, 2022 4:00 PM'
                 },
                 {
                     player1: '../public/img/game-img-5.png',
@@ -106,7 +110,9 @@ export default {
                     text_1: 'Youtube',
                     text_2: 'Twitch',
                     icon_youtube: '../public/img/icon/youtube-icon.png',
-                    icon_twitch: '../public/img/icon/twitch-icon.png'
+                    icon_twitch: '../public/img/icon/twitch-icon.png',
+                    title:'Nay Corral Gundown',
+                    time:'December 25, 2022 4:00 PM'
                 },
                 {
                     player1: '../public/img/game-img-7.png',
@@ -115,7 +121,9 @@ export default {
                     text_1: 'Youtube',
                     text_2: 'Twitch',
                     icon_youtube: '../public/img/icon/youtube-icon.png',
-                    icon_twitch: '../public/img/icon/twitch-icon.png'
+                    icon_twitch: '../public/img/icon/twitch-icon.png',
+                    title:'League Of Legends',
+                    time:'December 25, 2022 4:00 PM'
                 }
             ]
         }
@@ -380,6 +388,9 @@ export default {
 
         .text-box {
             color: $colorwhite;
+            p {
+                font-family: $font_style;
+            }
         }
 
         .img-box {
@@ -389,6 +400,7 @@ export default {
 
     .btn-box {
         button {
+            font-family: $font_style;
             background-color: $colorgreen;
             color: $colorblack;
             border-radius: 25px;
@@ -425,6 +437,7 @@ export default {
         justify-content: center;
 
         button {
+            font-family: $font_style;
             background-color: $colorgreen;
             color: $colorblack;
             border-radius: 25px;

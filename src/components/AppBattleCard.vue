@@ -57,6 +57,7 @@ export default {
         }
         .card-text {
             color: $colorlime;
+            font-family: $font_style;
         }
     }
 </style>
