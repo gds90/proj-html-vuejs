@@ -27,7 +27,7 @@ export default {
             <div class="newsletter">
                 <div class="container">
                     <div class="row justify-content-center">
-                        <div class="col-10">
+                        <div class="col-11">
                             <div class="footer-form">
                                 <div class="row align-items-center ">
                                     <div class="col-7">
@@ -52,7 +52,7 @@ export default {
                 <div class="row pb-120">
                     <div class="col-4">
                         <img src="/public/img/logo.png" alt="futio">
-                        <p class="mt-4 mb-4">Lorem ipsum dolor sit amet, elit. varius enim in eros elementum Duis mi quis viverra ornare</p>
+                        <p class="mt-4 mb-4 footer-p">Lorem ipsum dolor sit amet, elit. varius enim in eros elementum Duis mi quis viverra ornare</p>
                         <div class="socials d-flex gap-2">
                             <div class="single-social">
                                 <i class="fab fa-youtube"></i>
@@ -93,7 +93,7 @@ export default {
         <div class="footer-bottom">
             <div class="container">
                 <div class="row">
-                    <div class="col-12 text-center">
+                    <div class="col-12 text-center font-style">
                         <p>
                             Copyright © 2022
                             <a href="#">FUTIO</a>
@@ -112,6 +112,10 @@ export default {
 footer {
     background-color: #273449;
 
+    .footer-p {
+        font-family: $font_style;
+    }
+
     h5,
     p {
         color: white;
@@ -120,7 +124,7 @@ footer {
     a {
         margin-top: 10px;
         text-decoration: none;
-        color: gray;
+        color: #fff;
 
         &:hover {
             color: $colorlime;
@@ -133,6 +137,10 @@ footer {
 
         a {
             color: $colorlime;
+        }
+
+        .font-style {
+            font-family: $font_style;
         }
     }
 
@@ -150,7 +158,7 @@ footer {
             }
 
             p {
-                color: gray;
+                color: #fff;
             }
 
             b,
@@ -167,7 +175,7 @@ footer {
         h3 {
             font-weight: 700;
             margin-bottom: 10px;
-            font-size: 41px;
+            font-size: 40px;
             line-height: 55.9px;
             color: white;
         }
@@ -186,6 +194,7 @@ footer {
         }
 
         .form-group {
+            font-family: $font_style;
             padding: 0 5px;
 
             button {
@@ -207,6 +216,12 @@ footer {
                 margin: 4px;
                 border: none;
                 background: transparent;
+                width: 100%;
+
+                &::placeholder {
+                color: #B4ACC8;
+                opacity: 1; /* Firefox */
+                }
             }
         }
     }
@@ -226,7 +241,7 @@ footer {
 }
 
 .pt-200 {
-    padding-top: 200px;
+    padding-top: 250px;
 }
 
 .pb-120 {
