@@ -284,7 +284,7 @@ export default {
                         <Title :titles="titlesSections[4]"/>
                     </div>
                     <div class="col-12 d-flex justify-content-center">
-                        <div class="img-container">
+                        <div class="img-container position-relative">
                             <img src="/public/img/video-bg.png" alt="">
                             <div>
                                 <button type="button" class="btn btn-warning"><img src="/img/icon/live-icon.png" alt=""> live</button>
@@ -617,6 +617,18 @@ export default {
             left: 50%;
             transform: translate(-50%, -50%);
             border-radius: 50%;
+
+            &::before {
+                position: absolute;
+                top: -9px;
+                left: -12px;
+                content: "";
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                border: 1px solid #07cc7c;
+                animation: stretch 4s linear infinite;
+            }
 
             a {
 
