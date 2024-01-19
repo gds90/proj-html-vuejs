@@ -43,7 +43,9 @@ export default {
 @use '../assets/styles/generals.scss' as *;
 @use '../assets/styles/partials/variables' as *;
 
-
+.card.text-center {
+    border: 1px solid #556F9C;
+}
 
     .card-header,
     .card-footer {
