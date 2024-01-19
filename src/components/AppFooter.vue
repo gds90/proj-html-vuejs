@@ -22,7 +22,7 @@ export default {
 }
 </script>
 <template lang="">
-    <footer>
+    <footer id="contact">
         <!-- Footer top start  -->
         <div class="footer-top pt-200 d-flex justify-content-center">
             <div class="newsletter">
@@ -77,7 +77,7 @@ export default {
                         </ul>
                     </div>
                     <div class="col-2 contect">
-                        <h5>Contect</h5>
+                        <h5>Contact</h5>
                         <ul class="list-unstyled">
                             <li>
                                 <b>Location:</b>
