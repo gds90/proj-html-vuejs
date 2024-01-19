@@ -20,12 +20,13 @@ export default {
     <div class="jumbotrone position-relative">
         <div class="container">
             <div class="row">
-                <div class="col-6">
+                <div class="col-6 position-relative">
                     <div class="content">
 
                         <div class="top">
     
                             <Title :titles="titles"/>
+                            
                         </div>
                         <div class="bottom mt-3">
                             <button class="text-uppercase">
@@ -38,6 +39,7 @@ export default {
                             </a>
                         </div>
                     </div>
+                    <img src="../../public/img/game-controler.png" alt="" class="game-controler">
                 </div>
                 <div class="col-5">
                     <div class="img-container">
@@ -68,12 +70,11 @@ export default {
         padding-top: 100px;
     }
 
-
-    .col-7 {
-
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+    .col-6 {
+        .content {
+            position: relative;
+            z-index: 2;
+        }
     }
 
     button {
@@ -101,7 +102,14 @@ export default {
         position: relative;
         top: 0;
         right: 0;
-        width: 60%;
+        max-width: unset;
+    }
+
+    .game-controler {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+
     }
 }
 </style>
