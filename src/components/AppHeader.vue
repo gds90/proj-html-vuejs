@@ -207,7 +207,7 @@ export default {
                             </a>
                         </div>
                         <div class="d-flex justify-content-between text-capitalize ">
-                            <div class="d-flex align-items-center pt-2">
+                            <div class="d-flex align-items-center pt-2 pe-5">
                                 <ul class="d-flex list-unstyled">
                                     <li class="ms-3 d-flex justify-content-center" v-for="link in navBarLinks" @mouseover='link.flag_dropdown = true' @mouseleave='link.flag_dropdown = false'>
                                         
