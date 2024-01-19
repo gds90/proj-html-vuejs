@@ -14,8 +14,8 @@ export default {
 </script>
 <template lang="">
     <div>
-        <h5 v-show= 'titles.section !== ""'>{{titles.section}}</h5>
-        <h1 v-show= 'titles.title !== ""'>{{titles.title}}</h1>
+        <h5 :class="titles.isWhite == true ? 'text-light' : 'lime-h5'" v-show= 'titles.section !== ""'>{{titles.section}}</h5>
+        <h2 v-show= 'titles.title !== ""'>{{titles.title}}</h2>
         <p v-show= 'titles.subtitle !== ""'>{{titles.subtitle}}</p>
     </div>
 </template>
@@ -23,15 +23,24 @@ export default {
 @use '../assets/styles/partials/variables' as *;
 
 h5 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px;
+}
+
+.lime-h5 {
     color: $colorlime;
 }
 
-h1 {
+h2 {
     color: $colorwhite;
+    font-size: 57px;
+    font-weight: 700;
 }
 
 p {
     font-family: $font_style;
     color: $colorpanna;
+    font-size: 18px;
 }
 </style>
