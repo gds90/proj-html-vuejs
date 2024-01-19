@@ -23,11 +23,13 @@ export default {
 </script>
 <template lang="">
     <footer>
+        <!-- Footer top start  -->
         <div class="footer-top pt-200 d-flex justify-content-center">
             <div class="newsletter">
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-11">
+                            <!-- Footer form  -->
                             <div class="footer-form">
                                 <div class="row align-items-center ">
                                     <div class="col-7">
@@ -71,7 +73,7 @@ export default {
                     <div class="col-2" v-for="link, index in links" :key="index">
                         <h5>{{link.name}}</h5>
                         <ul class="list-unstyled">
-                            <li v-for="item, index in link.items" :key="index"><a href="#">{{item}}</a></li>
+                            <li v-for="item, index in link.items" :key="index" class="my-3 fs-5"><a href="#">{{item}}</a></li>
                         </ul>
                     </div>
                     <div class="col-2 contect">
@@ -89,8 +91,10 @@ export default {
                     </div>
                 </div>
             </div>
+            <!-- Footer top end  -->
         </div>
         <div class="footer-bottom">
+            <!-- Footer bottom start  -->
             <div class="container">
                 <div class="row">
                     <div class="col-12 text-center font-style">
@@ -101,6 +105,7 @@ export default {
                         </p>
                     </div>
                 </div>
+                <!-- Footer bottom end  -->
             </div>
         </div>
     </footer>
@@ -124,7 +129,7 @@ footer {
     a {
         margin-top: 10px;
         text-decoration: none;
-        color: #fff;
+        color: rgb(171, 171, 171);
 
         &:hover {
             color: $colorlime;
@@ -219,8 +224,9 @@ footer {
                 width: 100%;
 
                 &::placeholder {
-                color: #B4ACC8;
-                opacity: 1; /* Firefox */
+                    color: #B4ACC8;
+                    opacity: 1;
+                    /* Firefox */
                 }
             }
         }
@@ -236,6 +242,7 @@ footer {
 
         &:hover {
             background-color: $colorlime;
+
         }
     }
 }
