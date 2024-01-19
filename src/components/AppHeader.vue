@@ -207,7 +207,7 @@ export default {
                             </a>
                         </div>
                         <div class="d-flex justify-content-between w-75 text-capitalize">
-                            <div class="d-flex align-items-center pt-2">
+                            <div class="d-flex align-items-center pt-2 fs-6">
                                 <ul class="d-flex list-unstyled">
                                     <li class="ms-3 d-flex justify-content-center" v-for="link in navBarLinks" @mouseover='link.flag_dropdown = true' @mouseleave='link.flag_dropdown = false'>
                                         <a :class='link.flag_dropdown ? "active" : ""' href="#">{{link.link_name}}</a>
@@ -265,7 +265,7 @@ header {
         width: 100%;
         box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.3);
         transition: all 0.5s;
-        animation-duration: 1s;
+        animation-duration: 0.8s;
         animation-fill-mode: both;
         animation-name: fadeInDown;
     }
@@ -273,7 +273,7 @@ header {
     a {
         text-decoration: none;
         color: white;
-        font-size: 20px;
+        font-size: 18px;
         font-weight: bold;
     }
 
@@ -310,7 +310,7 @@ header {
     top: 60%;
     transition: all 3s;
     max-width: 200px;
-
+    box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.3);
 }
 
 .list-cont-li {

@@ -117,7 +117,7 @@ export default {
     .game-controler {
         position: absolute;
         left: -25%;
-        bottom: -50%;
+        bottom: -35%;
     }
 }
 </style>
