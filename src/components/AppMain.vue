@@ -600,7 +600,6 @@ export default {
             transform: translate(-50%, -50%);
             border-radius: 50%;
 
-
             a {
 
                 img {
