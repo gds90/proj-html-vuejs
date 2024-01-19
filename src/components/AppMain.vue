@@ -235,7 +235,7 @@ export default {
         <section>
         </section>
         <!-- Section 3 -->
-        <section class='bg-black'>
+        <section class='bg-black pad-bottom'>
             <div class="text-center">
                 <div class="container visibility">
                     <div class="row">
@@ -533,6 +533,10 @@ export default {
         }
 
     }
+}
+
+.pad-bottom {
+    padding: 100px 0;
 }
 
 .bg-black {
