@@ -104,10 +104,12 @@ export default {
                             link_section: [
                                 {
                                     link_name: 'players',
+                                    flag_dropdown: false,
 
                                 },
                                 {
                                     link_name: 'player single',
+                                    flag_dropdown: false,
 
                                 },
 
@@ -204,20 +206,19 @@ export default {
                                 <img src="../../public/img/logo.png" alt="">
                             </a>
                         </div>
-                        <div class="d-flex justify-content-between w-75">
-
+                        <div class="d-flex justify-content-between w-75 text-capitalize">
                             <div class="d-flex align-items-center">
                                 <ul class="d-flex list-unstyled">
                                     <li class="ms-3 d-flex justify-content-center" v-for="link in navBarLinks" @mouseover='link.flag_dropdown = true' @mouseleave='link.flag_dropdown = false'>
-                                        <a href="#">{{link.link_name}}</a>
+                                        <a :class='link.flag_dropdown ? "active" : ""' href="#">{{link.link_name}}</a>
                                         <div v-show='link.flag_dropdown' class='list-cont'>
                                             <ul class="list-unstyled position-relative">
-                                                <li v-for="link in link.link_section "  @mouseover='link.flag_dropdown_li = true' @mouseleave='link.flag_dropdown_li = false'>
-                                                    <a href="">{{link.link_name}}</a>
+                                                <li v-for="link in link.link_section " class='position-relative'  @mouseover='link.flag_dropdown_li = true' @mouseleave='link.flag_dropdown_li = false'>
+                                                    <a :class='link.flag_dropdown_li ? "active" : ""' href="">{{link.link_name}}</a>
                                                     <div class='list-cont-li'  v-show='link.flag_dropdown_li'>
                                                         <ul class="list-unstyled">
-                                                            <li v-for="link in link.link_section " >
-                                                                <a href="">{{link.link_name}}</a>
+                                                            <li v-for="link in link.link_section " @mouseover='link.flag_dropdown = true' @mouseleave='link.flag_dropdown = false'>
+                                                                <a :class='link.flag_dropdown ? "active" : ""' href="">{{link.link_name}}</a>
                                                             </li>
                                                         </ul>
                                                     </div>
@@ -301,12 +302,25 @@ header {
     position: absolute;
     top: 60%;
     transition: all 3s;
+    max-width: 200px;
+
 }
 
 .list-cont-li {
     background-color: rgb(28, 34, 45);
     position: absolute;
-    right: -65%;
+    top: 0;
+    right: -67%;
     transition: all 3s;
+    box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.3);
+
+}
+
+.active {
+    color: $colorlime;
+}
+
+li {
+    padding: 5px 10px;
 }
 </style>
