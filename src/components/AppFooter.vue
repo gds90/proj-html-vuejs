@@ -15,10 +15,6 @@ export default {
                 {
                     name: 'Follow Us',
                     items: ['Facebook', 'Twitter', 'Instagram', 'Youtube', 'Github']
-                },
-                {
-                    name: 'Contect',
-                    items: ['Location: 4 Mayfield, Buckden, PE19 5SZ', 'Phone: (302) 555-0107']
                 }
             ]
         }
@@ -78,6 +74,19 @@ export default {
                             <li v-for="item, index in link.items" :key="index"><a href="#">{{item}}</a></li>
                         </ul>
                     </div>
+                    <div class="col-2 contect">
+                        <h5>Contect</h5>
+                        <ul class="list-unstyled">
+                            <li>
+                                <b>Location:</b>
+                                <p>4 Mayfield, Buckden, PE19 5SZ</p>
+                            </li>
+                            <li>
+                                <b>Phone:</b>
+                                <p>(302) 555-0107</p>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -109,7 +118,7 @@ footer {
     }
 
     a {
-        margin-top: 8px;
+        margin-top: 10px;
         text-decoration: none;
         color: gray;
 
@@ -119,7 +128,7 @@ footer {
     }
 
     .footer-bottom {
-        background-color: $colorblack;
+        background-color: #1A222E;
         padding: 30px 0;
 
         a {
@@ -129,6 +138,26 @@ footer {
 
     .footer-top {
         position: relative;
+
+        a {
+            font-family: $font_style;
+        }
+
+        .contect {
+
+            b {
+                color: $colorlime;
+            }
+
+            p {
+                color: gray;
+            }
+
+            b,
+            p {
+                font-family: $font_style;
+            }
+        }
     }
 
     .newsletter {
@@ -138,7 +167,7 @@ footer {
         h3 {
             font-weight: 700;
             margin-bottom: 10px;
-            font-size: 43px;
+            font-size: 41px;
             line-height: 55.9px;
             color: white;
         }
@@ -147,6 +176,7 @@ footer {
             font-size: 18px;
             font-weight: 400;
             line-height: 30px;
+            font-family: $font_style;
         }
 
         .footer-form {
