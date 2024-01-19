@@ -13,49 +13,57 @@ export default {
                     section: 'Game With Live Stearming',
                     title: 'Future Of Esports',
                     subtitle: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium',
-                    isWhite: false 
+                    isWhite: false,
+                    isBigger: true
                 },
                 {
                     section: 'The Ultimate Competitive Gaming Platfrom',
                     title: 'Make Your Mark On The Battle Field',
                     subtitle: 'libero malesuada feugiat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Cras ultricies ligula sed magna dictum porta.',
-                    isWhite: false 
+                    isWhite: false,
+                    isBigger: false
                 },
                 {
                     section: 'Trending Battle',
                     title: 'Keep Eyes & Manage Upcoming Battle',
                     subtitle: 'libero malesuada feugiat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Cras ultricies ligula sed magna dictum porta.',
-                    isWhite: false 
+                    isWhite: false,
+                    isBigger: false
                 },
                 {
                     section: '',
                     title: 'Futio Quick Facts',
                     subtitle: '',
-                    isWhite: false 
+                    isWhite: false,
+                    isBigger: false
                 },
                 {
                     section: 'Live Streaming',
                     title: 'Watch The Streams',
                     subtitle: 'libero malesuada feugiat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Cras ultricies ligula sed magna dictum porta.',
-                    isWhite: false 
+                    isWhite: false,
+                    isBigger: false
                 },
                 {
                     section: 'Futio Feedback',
                     title: 'What Our Gamers Say',
                     subtitle: 'libero malesuada feugiat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Cras ultricies ligula sed magna dictum porta.',
-                    isWhite: false 
+                    isWhite: false,
+                    isBigger: false
                 },
                 {
                     section: 'Make Offer',
                     title: 'Get 70% Offer Discount',
                     subtitle: '',
-                    isWhite: true 
+                    isWhite: true,
+                    isBigger: false
                 },
                 {
                     section: 'Latest News',
                     title: 'Stay Updated With Our Latest News Articles',
                     subtitle: 'libero malesuada feugiat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Cras ultricies ligula sed magna dictum porta.',
-                    isWhite: false
+                    isWhite: false,
+                    isBigger: false
                 },
             ],
             blogCards: [
@@ -474,13 +482,16 @@ export default {
             background-color: $colorgreen;
             color: $colorblack;
             @include btn-lime;
+
             &:hover {
-            background-color: $colorlime;
-            }   
+                background-color: $colorlime;
+            }
         }
+
         .border-btn {
             color: $colorblack;
             @include btn-border-lime;
+
             &::after {
                 position: absolute;
                 content: "";
@@ -514,13 +525,16 @@ export default {
             background-color: $colorgreen;
             color: $colorblack;
             @include btn-lime;
+
             &:hover {
-            background-color: $colorlime;
-            }   
+                background-color: $colorlime;
+            }
         }
+
         .border-btn {
             color: $colorblack;
             @include btn-border-lime;
+
             &::after {
                 position: absolute;
                 content: "";
@@ -646,5 +660,4 @@ export default {
     .feedback-header {
         margin-bottom: 55px;
     }
-}
-</style>
+}</style>

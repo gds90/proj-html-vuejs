@@ -15,7 +15,7 @@ export default {
 <template lang="">
     <div>
         <h5 :class="titles.isWhite == true ? 'text-light' : 'lime-h5'" v-show= 'titles.section !== ""'>{{titles.section}}</h5>
-        <h2 v-show= 'titles.title !== ""'>{{titles.title}}</h2>
+        <h2 :class="titles.isBigger == true ? 'text-bigger' : ''" v-show= 'titles.title !== ""'>{{titles.title}}</h2>
         <p v-show= 'titles.subtitle !== ""'>{{titles.subtitle}}</p>
     </div>
 </template>
@@ -36,6 +36,12 @@ h2 {
     color: $colorwhite;
     font-size: 57px;
     font-weight: 700;
+
+    &.text-bigger {
+
+        font-size: 70px;
+        line-height: 1.3;
+    }
 }
 
 p {

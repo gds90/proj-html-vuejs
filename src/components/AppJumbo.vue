@@ -38,12 +38,14 @@ export default {
                             </a>
                         </div>
                     </div>
-                    <img src="../../public/img/game-controler.png" alt="" class="game-controler">
+                    <div class="game-controler pos">
+
+                        <img src="../../public/img/game-controler.png" alt="" >
+                    </div>
                 </div>
                 <div class="col-5">
                     <div class="img-container">
                         <img src="../../public/img/index-banner-illus.png" alt="" class="soldier position-absolute">
-
                     </div>
                 </div>
             </div>
@@ -114,8 +116,8 @@ export default {
 
     .game-controler {
         position: absolute;
-        left: 0;
-        bottom: 0;
-
+        left: -25%;
+        bottom: -50%;
     }
-}</style>
+}
+</style>
