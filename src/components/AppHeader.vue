@@ -206,15 +206,27 @@ export default {
                                 <img src="../../public/img/logo.png" alt="">
                             </a>
                         </div>
-                        <div class="d-flex justify-content-between w-75 text-capitalize">
+                        <div class="d-flex justify-content-between text-capitalize ">
                             <div class="d-flex align-items-center">
                                 <ul class="d-flex list-unstyled">
                                     <li class="ms-3 d-flex justify-content-center" v-for="link in navBarLinks" @mouseover='link.flag_dropdown = true' @mouseleave='link.flag_dropdown = false'>
-                                        <a :class='link.flag_dropdown ? "active" : ""' href="#">{{link.link_name}}</a>
+                                        
+                                        <a :class='link.flag_dropdown ? "active" : ""' href="#">
+                                            <div class="d-flex align-items-center">
+
+                                                {{link.link_name}}
+                                                <i v-show="link.link_section.length > 0" class="fa-solid fa-chevron-down ms-1"></i>
+                                            </div>
+                                        </a>
                                         <div v-show='link.flag_dropdown' class='list-cont'>
                                             <ul class="list-unstyled position-relative">
                                                 <li v-for="link in link.link_section " class='position-relative'  @mouseover='link.flag_dropdown_li = true' @mouseleave='link.flag_dropdown_li = false'>
-                                                    <a :class='link.flag_dropdown_li ? "active" : ""' href="">{{link.link_name}}</a>
+                                                    <a :class='link.flag_dropdown_li ? "active" : ""' href="">
+                                                        <div class="d-flex align-items-center">
+                                                            {{link.link_name}}
+                                                            <i v-show="link.link_section.length > 0" class= "fa-solid fa-caret-right ms-1 mt-1"></i>
+                                                        </div>
+                                                    </a>
                                                     <div class='list-cont-li'  v-show='link.flag_dropdown_li'>
                                                         <ul class="list-unstyled">
                                                             <li v-for="link in link.link_section " @mouseover='link.flag_dropdown = true' @mouseleave='link.flag_dropdown = false'>
@@ -228,11 +240,12 @@ export default {
                                     </li>
                                </ul>
                             </div>
-                            <div>
-                                <a href="">
-                                    <i class="fa-solid fa-cart-shopping me-4 text-white"></i>
+                            <div class="ms-5">
+                                <a href="" class="position-relative me-2">
+                                    <div class="shopping-number position-absolute p-1 rounded-5">03</div>
+                                    <img src="../../public/img/icon/cart-icon.png" class="cart">
                                 </a>
-                                <button class="text-uppercase border-btn">Live Streaming</button>
+                                <button class="text-uppercase border-btn ms-4">Live Streaming</button>
                             </div>
                         </div>
             
@@ -289,18 +302,19 @@ header {
     }
 
     .border-btn {
-            color: $colorblack;
-            @include btn-border-lime;
-            &::after {
-                position: absolute;
-                content: "";
-                width: 108%;
-                height: 120%;
-                border: 1px solid $colorgreen;
-                padding: 5px;
-                border-radius: 30px;
-            }
+        color: $colorblack;
+        @include btn-border-lime;
+
+        &::after {
+            position: absolute;
+            content: "";
+            width: 108%;
+            height: 120%;
+            border: 1px solid $colorgreen;
+            padding: 5px;
+            border-radius: 30px;
         }
+    }
 }
 
 .list-cont {
@@ -328,5 +342,13 @@ header {
 
 li {
     padding: 5px 10px;
+}
+
+
+.shopping-number {
+    font-size: 11px;
+    background-color: $colorgreen;
+    right: -15px;
+
 }
 </style>
