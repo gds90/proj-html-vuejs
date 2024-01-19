@@ -95,7 +95,7 @@ export default {
                 content: "";
                 width: 108%;
                 height: 120%;
-                border: 1px solid $colorlime;
+                border: 1px solid $colorgreen;
                 padding: 5px;
                 border-radius: 30px;
             }

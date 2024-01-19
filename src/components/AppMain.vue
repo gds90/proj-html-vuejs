@@ -428,6 +428,7 @@ export default {
 .latest-news {
     background-color: black;
     position: relative;
+    padding-bottom: 250px;
 }
 
 .background-section-1 {
@@ -485,7 +486,7 @@ export default {
                 content: "";
                 width: 108%;
                 height: 120%;
-                border: 1px solid $colorlime;
+                border: 1px solid $colorgreen;
                 padding: 5px;
                 border-radius: 30px;
             }
@@ -525,7 +526,7 @@ export default {
                 content: "";
                 width: 108%;
                 height: 120%;
-                border: 1px solid $colorlime;
+                border: 1px solid $colorgreen;
                 padding: 5px;
                 border-radius: 30px;
             }
@@ -537,7 +538,6 @@ export default {
 .bg-black {
     color: $colorblack;
     padding-top: 100px;
-    padding-bottom: 120px;
 }
 
 
