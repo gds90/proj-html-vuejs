@@ -50,7 +50,7 @@ export default {
                                 <a href="">
                                     <i class="fa-solid fa-cart-shopping me-4 text-white"></i>
                                 </a>
-                                <button class="text-uppercase">Live Streaming</button>
+                                <button class="text-uppercase border-btn">Live Streaming</button>
                             </div>
                         </div>
             
@@ -64,6 +64,7 @@ export default {
 
 <style lang="scss">
 @use '../assets/styles/partials/variables' as*;
+@use '../assets/styles/partials/mixins' as *;
 
 header {
     background-color: transparent;
@@ -98,20 +99,25 @@ header {
         font-family: $font_style;
         background-color: $colorgreen;
         color: $colorblack;
-        border-radius: 25px;
-        font-weight: 600;
-        padding: 10px 20px;
-        font-size: 18px;
-        position: relative;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        margin: 5px;
-        transition: 0.3s all;
+        @include btn-lime;
 
         &:hover {
             background-color: $colorlime;
         }
     }
+
+    .border-btn {
+            color: $colorblack;
+            @include btn-border-lime;
+            &::after {
+                position: absolute;
+                content: "";
+                width: 108%;
+                height: 120%;
+                border: 1px solid $colorlime;
+                padding: 5px;
+                border-radius: 30px;
+            }
+        }
 }
 </style>

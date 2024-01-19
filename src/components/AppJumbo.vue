@@ -25,10 +25,10 @@ export default {
 
                         <div class="top">
     
-                            <Title :titles="titles"/>
+                            <Title class="size-font" :titles="titles"/>
                         </div>
                         <div class="bottom mt-3">
-                            <button class="text-uppercase">
+                            <button class="text-uppercase border-btn">
                                 explore games
                                 <i class="ps-2 fa-solid fa-chevron-right"></i>
                                 <i class="fa-solid fa-chevron-right"></i>
@@ -53,6 +53,7 @@ export default {
 
 <style lang="scss" scoped >
 @use '../assets/styles/partials/variables' as*;
+@use '../assets/styles/partials/mixins' as *;
 
 .jumbotrone {
     background-image: url('../../public/img/index-banner-bg.png');
@@ -66,6 +67,7 @@ export default {
 
     .row {
         padding-top: 100px;
+        
     }
 
 
@@ -80,21 +82,24 @@ export default {
         font-family: $font_style;
         background-color: $colorgreen;
         color: $colorblack;
-        border-radius: 25px;
-        font-weight: 600;
-        padding: 10px 20px;
-        font-size: 18px;
-        position: relative;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        margin: 5px;
-        transition: 0.3s all;
-
-        &:hover {
+        @include btn-lime;
+            &:hover {
             background-color: $colorlime;
-        }
+            }
     }
+    .border-btn {
+            color: $colorblack;
+            @include btn-border-lime;
+            &::after {
+                position: absolute;
+                content: "";
+                width: 108%;
+                height: 120%;
+                border: 1px solid $colorlime;
+                padding: 5px;
+                border-radius: 30px;
+            }
+        }
 
 
     .soldier {

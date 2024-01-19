@@ -30,9 +30,9 @@ export default {
                     </div>
                     <div class="card-footer text-body-secondary">
                         <div class="d-flex justify-content-center align-items-center p-4 text-light">
-                            <img class="px-2" :src="battle.icon_youtube" alt="">
+                            <img class="cursor px-2" :src="battle.icon_youtube" alt="">
                             <div class="pe-2">{{ battle.text_1}}</div>
-                            <img class="px-2" :src="battle.icon_twitch" alt="">
+                            <img class="cursor px-2" :src="battle.icon_twitch" alt="">
                             <div>{{ battle.text_2}}</div>
                         </div>
                     </div>
@@ -47,7 +47,12 @@ export default {
 
     .card-header,
     .card-footer {
+        font-family: $font_style;
         background-color: #273448;
+
+        .cursor {
+            cursor: pointer;
+        }
     }
 
     .card-body {

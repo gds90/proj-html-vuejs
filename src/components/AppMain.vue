@@ -12,42 +12,50 @@ export default {
                 {
                     section: 'Game With Live Stearming',
                     title: 'Future Of Esports',
-                    subtitle: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium'
+                    subtitle: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium',
+                    isWhite: false 
                 },
                 {
                     section: 'The Ultimate Competitive Gaming Platfrom',
                     title: 'Make Your Mark On The Battle Field',
-                    subtitle: 'libero malesuada feugiat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Cras ultricies ligula sed magna dictum porta.'
+                    subtitle: 'libero malesuada feugiat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Cras ultricies ligula sed magna dictum porta.',
+                    isWhite: false 
                 },
                 {
                     section: 'Trending Battle',
                     title: 'Keep Eyes & Manage Upcoming Battle',
-                    subtitle: 'libero malesuada feugiat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Cras ultricies ligula sed magna dictum porta.'
+                    subtitle: 'libero malesuada feugiat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Cras ultricies ligula sed magna dictum porta.',
+                    isWhite: false 
                 },
                 {
                     section: '',
                     title: 'Futio Quick Facts',
-                    subtitle: ''
+                    subtitle: '',
+                    isWhite: false 
                 },
                 {
                     section: 'Live Streaming',
                     title: 'Watch The Streams',
-                    subtitle: 'libero malesuada feugiat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Cras ultricies ligula sed magna dictum porta.'
+                    subtitle: 'libero malesuada feugiat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Cras ultricies ligula sed magna dictum porta.',
+                    isWhite: false 
                 },
                 {
                     section: 'Futio Feedback',
                     title: 'What Our Gamers Say',
-                    subtitle: 'libero malesuada feugiat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Cras ultricies ligula sed magna dictum porta.'
+                    subtitle: 'libero malesuada feugiat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Cras ultricies ligula sed magna dictum porta.',
+                    isWhite: false 
                 },
                 {
                     section: 'Make Offer',
                     title: 'Get 70% Offer Discount',
-                    subtitle: ''
+                    subtitle: '',
+                    isWhite: true 
                 },
                 {
                     section: 'Latest News',
                     title: 'Stay Updated With Our Latest News Articles',
-                    subtitle: 'libero malesuada feugiat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Cras ultricies ligula sed magna dictum porta.'
+                    subtitle: 'libero malesuada feugiat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Cras ultricies ligula sed magna dictum porta.',
+                    isWhite: false
                 },
             ],
             blogCards: [
@@ -156,7 +164,7 @@ export default {
             
         </section>
         <!-- SECTION 1 -->
-        <section class="background-section-1">
+        <section class="background-section-1 pb-120">
             <div class="container">
                 <div class="row">
                     <!-- IMG -->
@@ -196,7 +204,7 @@ export default {
                             </div>
                         </div>
                         <div class="btn-box pt-5">
-                            <button class="text-uppercase">
+                            <button class="text-uppercase position-relative border-btn">
                                 Play Now
                                 <i class="ps-2 fa-solid fa-chevron-right"></i>
                                 <i class="fa-solid fa-chevron-right"></i>
@@ -210,12 +218,12 @@ export default {
         <section class="background-section-2">
             <div class="container">
                 <div class="row">
-                    <div class="col-12 text-center py-5">
+                    <div class="col-8 m-auto text-center py-5">
                         <Title :titles="titlesSections[2]"/>
                     </div>
                     <AppBattleCard v-for="battle, index in battleCards" :key="index" :battle="battle" />
                     <div class="btn-box pt-5">
-                        <button class="text-uppercase">
+                        <button class="text-uppercase border-btn">
                             view all match
                             <i class="ps-2 fa-solid fa-chevron-right"></i>
                             <i class="fa-solid fa-chevron-right"></i>
@@ -266,7 +274,7 @@ export default {
         <section class='background-section-4'>
             <div class="container">
                 <div class="row">
-                    <div class="col-12 text-center py-5">
+                    <div class="col-8 m-auto text-center py-5">
                         <Title :titles="titlesSections[4]"/>
                     </div>
                     <div class="col-12 d-flex justify-content-center">
@@ -276,7 +284,7 @@ export default {
                                 <button type="button" class="btn btn-warning"><img src="/img/icon/live-icon.png" alt=""> live</button>
                             </div>
                             <div class='number-area'>
-                                <span>234,567</span> viewers <span>14,510</span> like
+                                <span>234,567</span> Viewers <span class="ms-4">14,510</span> Likes
                             </div>
                             <div class="title-area">
                                 <h3>League of Legends</h3>
@@ -321,11 +329,11 @@ export default {
                                 <img class="obj-1" src="/public/img/banner-item-obj1.png" alt="Banner item">
                                 <img class="obj-2" src="/public/img/banner-item-obj2.png" alt="Banner item" >
                             </div>
-                            <div class="banner">
-                                <div class="banner-title text-center ">
+                            <div class="banner text-light">
+                                <div class="banner-title text-center">
                                     <Title :titles="titlesSections[6]" />
                                 </div>
-                                <div class="btn-area text-center ">
+                                <div class="btn-area text-center">
                                     <a href="#" class="btn rounded-5">Get Offers</a>
                                 </div>
                             </div>
@@ -404,8 +412,9 @@ export default {
 }
 
 .btn-area {
+    font-family: $font_style;
     position: absolute;
-    bottom: 20%;
+    bottom: 15%;
     left: 50%;
     transform: translate(-50%, -50%);
 
@@ -441,7 +450,14 @@ export default {
         .text-box {
             color: $colorwhite;
 
+            h3 {
+                line-height: 30px;
+                font-weight: 700;
+                font-size: 24px;
+            }
+
             p {
+                line-height: 30px;
                 font-family: $font_style;
             }
         }
@@ -456,19 +472,22 @@ export default {
             font-family: $font_style;
             background-color: $colorgreen;
             color: $colorblack;
-            border-radius: 25px;
-            font-weight: 600;
-            padding: 10px 20px;
-            font-size: 18px;
-            position: relative;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            margin: 5px;
-            transition: 0.3s all;
-
+            @include btn-lime;
             &:hover {
-                background-color: $colorlime;
+            background-color: $colorlime;
+            }   
+        }
+        .border-btn {
+            color: $colorblack;
+            @include btn-border-lime;
+            &::after {
+                position: absolute;
+                content: "";
+                width: 108%;
+                height: 120%;
+                border: 1px solid $colorlime;
+                padding: 5px;
+                border-radius: 30px;
             }
         }
 
@@ -493,19 +512,22 @@ export default {
             font-family: $font_style;
             background-color: $colorgreen;
             color: $colorblack;
-            border-radius: 25px;
-            font-weight: 600;
-            padding: 10px 20px;
-            font-size: 18px;
-            position: relative;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            margin: 5px;
-            transition: 0.3s all;
-
+            @include btn-lime;
             &:hover {
-                background-color: $colorlime;
+            background-color: $colorlime;
+            }   
+        }
+        .border-btn {
+            color: $colorblack;
+            @include btn-border-lime;
+            &::after {
+                position: absolute;
+                content: "";
+                width: 108%;
+                height: 120%;
+                border: 1px solid $colorlime;
+                padding: 5px;
+                border-radius: 30px;
             }
         }
 
@@ -524,6 +546,7 @@ export default {
     color: $colorwhite;
 
     .text-green {
+        font-family: $font_style;
         color: $colorlime;
         font-size: 16px;
         font-weight: 300;
@@ -544,9 +567,10 @@ export default {
         }
 
         button {
+            font-family: $font_style;
             position: absolute;
-            top: 10px;
-            right: 10px;
+            top: 30px;
+            right: 30px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -576,7 +600,6 @@ export default {
             transform: translate(-50%, -50%);
             border-radius: 50%;
 
-
             a {
 
                 img {
@@ -589,9 +612,10 @@ export default {
         }
 
         .number-area {
+            font-family: $font_style;
             position: absolute;
-            bottom: 10px;
-            left: 10px;
+            bottom: 30px;
+            left: 30px;
             color: $colorwhite;
 
             span {

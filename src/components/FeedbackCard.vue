@@ -70,6 +70,7 @@ export default {
     }
 
     .review {
+        font-family: $font_style;
         font-size: 19px;
         line-height: 36px;
     }
@@ -85,7 +86,8 @@ export default {
 
     .user-data p {
         color: $colorlime;
-        font-size: 15px;
+        font-size: 18px;
+        font-family: $font_style;
     }
 }
 </style>

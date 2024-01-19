@@ -1,3 +1,4 @@
+
 @mixin box-random {
     font-size: 60px;
     font-weight: 700;
@@ -5,3 +6,30 @@
     border-radius: 25%;
     padding: 50px 0 50px 0;
 }
+
+@mixin btn-lime {
+        border-radius: 25px;
+        font-weight: 600;
+        padding: 10px 20px;
+        font-size: 18px;
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin: 5px;
+        transition: 0.3s all;
+        border: none;
+}
+@mixin btn-border-lime {
+        border-radius: 25px;
+        font-weight: 600;
+        padding: 10px 20px;
+        text-transform: uppercase;
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin: 5px;
+        transition: 0.3s all;
+}
+

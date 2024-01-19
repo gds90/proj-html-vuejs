@@ -22,12 +22,12 @@ export default {
     <div class="imageContainer">
         <img :src="news.image" alt="Blog News">
     </div>
-    <div class="textContainer p-3">
+    <div class="textContainer p-4">
         <div class="blogCardInfo">
             <div class="infoNews d-flex">
                 <span><img src="/img/icon/clock.png" alt="">{{news.time}}</span>
                 <span><img src="/img/icon/eye.png" alt="">{{news.views}}</span>
-                <span><img src="/img/icon/calendar.png" alt="">{{news.date}}</span>
+                <span><i class="pe-2 fa-regular fa-calendar"></i>{{news.date}}</span>
             </div>
             <h4 v-if="isFirst">{{news.title}}</h4>
             <h5 v-else>{{news.title}}</h5>
@@ -42,7 +42,7 @@ export default {
 .blogCardBox {
     background-color: $colorblue;
     border-radius: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
     padding: 0;
 
 
@@ -55,6 +55,7 @@ export default {
             margin-bottom: 20px;
 
             span {
+                font-family: $font_style;
                 display: inline-flex;
                 align-items: center;
                 margin-right: 25px;
@@ -77,7 +78,7 @@ export default {
         }
 
         h4 {
-            font-size: 42px;
+            font-size: 34px;
         }
     }
 }
