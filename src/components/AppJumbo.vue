@@ -100,7 +100,7 @@ export default {
     .soldier {
         position: relative;
         top: 0;
-        right: -5%;
+        right: 0;
         width: 60%;
     }
 }
