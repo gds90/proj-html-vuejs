@@ -27,39 +27,49 @@ export default {
 </script>
 <template lang="">
     <footer>
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-10">
-                    <div class="footer-form">
-                        <div class="row">
-                            <div class="col-7">
-                                <h3>Subscribe Newsletter</h3>
-                                <p>libero malesuada feugiat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.</p>
-                            </div>
-                            <div class="col-5">
-                                <form action="#">
-                                    <div class="form-group input-area d-flex align-items-center">
-                                        <input type="text" placeholder="Enter your email" autocomplete="off">
-                                        <button class="btn-area"><img src="/public/img/icon/send-icon.png" alt="icon"></button>
+        <div class="footer-top pt-200 d-flex justify-content-center">
+            <div class="newsletter">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-10">
+                            <div class="footer-form">
+                                <div class="row align-items-center ">
+                                    <div class="col-7">
+                                        <h3>Subscribe Newsletter</h3>
+                                        <p>libero malesuada feugiat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.</p>
                                     </div>
-                                </form>
+                                    <div class="col-5 align-items-center ">
+                                        <form action="#">
+                                            <div class="form-group input-area d-flex align-items-center justify-content-between">
+                                                <input type="text" placeholder="Enter your email" autocomplete="off">
+                                                <button class="btn-area"><img src="/public/img/icon/send-icon.png" alt="icon"></button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="footer-top pt-120 d-flex justify-content-center">
             <div class="container">
                 <div class="row pb-120">
                     <div class="col-4">
                         <img src="/public/img/logo.png" alt="futio">
                         <p class="mt-4 mb-4">Lorem ipsum dolor sit amet, elit. varius enim in eros elementum Duis mi quis viverra ornare</p>
-                        <div class="socials">
-                            <i class="fab fa-youtube"></i>
-                            <i class="fab fa-twitch"></i>
-                            <i class="fab fa-facebook-f"></i>
-                            <i class="fab fa-instagram"></i>
+                        <div class="socials d-flex gap-2">
+                            <div class="single-social">
+                                <i class="fab fa-youtube"></i>
+                            </div>
+                            <div class="single-social">
+                                <i class="fab fa-twitch"></i>
+                            </div>
+                            <div class="single-social">
+                                <i class="fab fa-facebook-f"></i>
+                            </div>
+                            <div class="single-social">
+                                <i class="fab fa-instagram"></i>
+                            </div>
                         </div>
                     </div>
                     <div class="col-2" v-for="link, index in links" :key="index">
@@ -111,59 +121,82 @@ footer {
     .footer-bottom {
         background-color: $colorblack;
         padding: 30px 0;
+
+        a {
+            color: $colorlime;
+        }
     }
 
     .footer-top {
         position: relative;
     }
 
-    .footer-top::before {
+    .newsletter {
         position: absolute;
-        content: "";
-        width: 100%;
-        height: 110%;
-        left: 0;
-        top: -20%;
-        z-index: -1;
-        background-color: #273449;
-    }
+        top: -150px;
 
+        h3 {
+            font-weight: 700;
+            margin-bottom: 10px;
+            font-size: 43px;
+            line-height: 55.9px;
+            color: white;
+        }
 
-    .footer-form {
-        border-radius: 30px;
-        background-color: $colorblue;
-        padding: 80px 60px 72px;
-    }
+        p {
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 30px;
+        }
 
-    .form-group {
-        padding: 0 5px;
+        .footer-form {
+            border-radius: 30px;
+            background-color: $colorblue;
+            padding: 80px 60px 72px;
+        }
 
-        button {
-            border-radius: 50%;
-            border: none;
-            background-color: $colorlime;
-            min-width: 50px;
-            min-height: 50px;
+        .form-group {
+            padding: 0 5px;
+
+            button {
+                border-radius: 50%;
+                border: none;
+                background-color: $colorlime;
+                min-width: 50px;
+                min-height: 50px;
+            }
+        }
+
+        .input-area {
+            border-radius: 15px;
+            background-color: #425374;
+            outline: 1px solid #556f9c;
+
+            input {
+                padding: 12px;
+                margin: 4px;
+                border: none;
+                background: transparent;
+            }
         }
     }
 
-    .input-area {
-        border-radius: 15px;
-        background-color: #425374;
-        outline: 1px solid #556f9c;
+    .single-social {
+        padding: 5px 10px;
+        border-radius: 50%;
+        border: 1px solid;
+        color: $colorpanna;
+        cursor: pointer;
+        font-size: 15px;
 
-        input {
-            padding: 12px;
-            margin: 4px;
-            border: none;
-            background: transparent;
-            width: 100%;
+        &:hover {
+            background-color: $colorlime;
         }
     }
 }
 
-.pt-120 {
-    padding-top: 120px;
+.pt-200 {
+    padding-top: 200px;
 }
 
 .pb-120 {
