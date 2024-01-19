@@ -61,7 +61,7 @@ export default {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 100vh;
+    height: 950px;
     background-size: cover;
 
     .row {
