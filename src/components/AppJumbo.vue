@@ -27,13 +27,13 @@ export default {
     
                             <Title class="size-font" :titles="titles"/>
                         </div>
-                        <div class="bottom mt-3">
+                        <div class="bottom mt-3 position-relative">
                             <button class="text-uppercase border-btn">
                                 explore games
                                 <i class="ps-2 fa-solid fa-chevron-right"></i>
                                 <i class="fa-solid fa-chevron-right"></i>
                             </button>
-                            <a href="" class="p-3 ms-3 bg-light rounded-5">
+                            <a href="" class="p-3 ms-3 bg-light rounded-5 icon-play">
                                 <img src="../../public/img/icon/play-icon.png" alt="">
                             </a>
                         </div>
@@ -94,6 +94,7 @@ export default {
     .border-btn {
         color: $colorblack;
         @include btn-border-lime;
+        margin-right: 20px;
 
         &::after {
             position: absolute;
@@ -104,6 +105,19 @@ export default {
             padding: 5px;
             border-radius: 30px;
         }
+    }
+
+    .icon-play::before {
+        position: absolute;
+        content: "";
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        background-color: rgba(61, 87, 17, 0);
+        border: 1px solid #07cc7c;
+        animation: stretch 4s linear infinite;
+        top: -5px;
+        right: 331.5px;
     }
 
 
