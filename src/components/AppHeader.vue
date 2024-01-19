@@ -5,7 +5,175 @@ export default {
         name: 'AppHeader'
         return {
             isHeaderFixed: false,
-            navBarLinks: ['Home', 'Games', 'Shop', 'Pages', 'Blog', 'Contact'],
+            navBarLinks: [
+                {
+                    flag_dropdown: false,
+                    link_name: 'home',
+                    link_section: []
+
+                },
+                {
+                    flag_dropdown: false,
+                    link_name: 'games',
+                    link_section: [
+                        {
+                            link_name: 'games',
+                            flag_dropdown_li: false,
+                            link_section: []
+                        },
+                        {
+                            link_name: 'games details',
+                            flag_dropdown_li: false,
+                            link_section: []
+
+                        },
+                        {
+                            link_name: 'match details',
+                            flag_dropdown_li: false,
+                            link_section: []
+
+                        },
+
+                    ]
+
+                },
+                {
+                    flag_dropdown: false,
+                    link_name: 'shop',
+                    link_section: [
+                        {
+                            link_name: 'shop',
+                            flag_dropdown_li: false,
+                            link_section: []
+                        },
+                        {
+                            link_name: 'shop single ',
+                            flag_dropdown_li: false,
+                            link_section: []
+
+                        },
+                        {
+                            link_name: 'shop single 2',
+                            flag_dropdown_li: false,
+                            link_section: []
+
+                        },
+                        {
+                            link_name: 'shop single 3',
+                            flag_dropdown_li: false,
+                            link_section: []
+
+                        },
+                        {
+                            link_name: 'shop single 4',
+                            flag_dropdown_li: false,
+                            link_section: []
+
+                        },
+
+                    ]
+
+                },
+                {
+                    flag_dropdown: false,
+                    link_name: 'pages',
+                    link_section: [
+                        {
+                            link_name: 'about us',
+                            flag_dropdown_li: false,
+                            link_section: []
+                        },
+                        {
+                            link_name: 'team',
+                            flag_dropdown_li: false,
+                            link_section: [
+                                {
+                                    link_name: 'all team',
+
+                                },
+                                {
+                                    link_name: 'team details',
+
+                                },
+
+                            ]
+                        },
+                        {
+                            link_name: 'player',
+                            flag_dropdown_li: false,
+                            link_section: [
+                                {
+                                    link_name: 'players',
+
+                                },
+                                {
+                                    link_name: 'player single',
+
+                                },
+
+                            ]
+                        },
+                        {
+                            link_name: 'upcoming matches',
+                            flag_dropdown_li: false,
+                            link_section: []
+                        },
+                        {
+                            link_name: 'FAQs',
+                            flag_dropdown_li: false,
+                            link_section: []
+                        },
+                        {
+                            link_name: 'privacy policy',
+                            flag_dropdown_li: false,
+                            link_section: []
+                        },
+                        {
+                            link_name: 'terms',
+                            flag_dropdown_li: false,
+                            link_section: []
+                        },
+                        {
+                            link_name: 'cooming soon',
+                            flag_dropdown_li: false,
+                            link_section: []
+                        },
+                        {
+                            link_name: 'error',
+                            flag_dropdown_li: false,
+                            link_section: []
+                        }
+
+                    ]
+
+                },
+                {
+                    flag_dropdown: false,
+                    link_name: 'blog',
+                    link_section: [
+                        {
+                            link_name: 'blog',
+                            flag_dropdown_li: false,
+                            link_section: []
+                        },
+                        {
+                            link_name: 'blog single',
+                            flag_dropdown_li: false,
+                            link_section: []
+
+                        },
+
+                    ]
+
+                },
+                {
+                    flag_dropdown: false,
+                    link_name: 'contact',
+                    link_section: []
+
+                }
+            ],
+
         }
     },
     mounted() {
@@ -30,7 +198,7 @@ export default {
                 <div class="col">
                     
 
-                    <div class="navbar">
+                    <div class="navbar position-relative">
                         <div class="navbar-brand">
                             <a href="">
                                 <img src="../../public/img/logo.png" alt="">
@@ -40,9 +208,22 @@ export default {
 
                             <div class="d-flex align-items-center">
                                 <ul class="d-flex list-unstyled">
-                                    
-                                    <li  class="ms-3" v-for="link in navBarLinks">
-                                        <a href="#">{{link}}</a>
+                                    <li class="ms-3 d-flex justify-content-center" v-for="link in navBarLinks" @mouseover='link.flag_dropdown = true' @mouseleave='link.flag_dropdown = false'>
+                                        <a href="#">{{link.link_name}}</a>
+                                        <div v-show='link.flag_dropdown' class='list-cont'>
+                                            <ul class="list-unstyled position-relative">
+                                                <li v-for="link in link.link_section "  @mouseover='link.flag_dropdown_li = true' @mouseleave='link.flag_dropdown_li = false'>
+                                                    <a href="">{{link.link_name}}</a>
+                                                    <div class='list-cont-li'  v-show='link.flag_dropdown_li'>
+                                                        <ul class="list-unstyled">
+                                                            <li v-for="link in link.link_section " >
+                                                                <a href="">{{link.link_name}}</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </li>
                                </ul>
                             </div>
@@ -113,5 +294,19 @@ header {
             background-color: $colorlime;
         }
     }
+}
+
+.list-cont {
+    background-color: rgb(28, 34, 45);
+    position: absolute;
+    top: 60%;
+    transition: all 3s;
+}
+
+.list-cont-li {
+    background-color: rgb(28, 34, 45);
+    position: absolute;
+    right: -65%;
+    transition: all 3s;
 }
 </style>
