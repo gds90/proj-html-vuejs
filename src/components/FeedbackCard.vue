@@ -1,9 +1,45 @@
 <script>
+import emblaCarouselVue from 'embla-carousel-vue'
+import Autoplay from 'embla-carousel-autoplay'
 export default {
     name: 'FeedbackCard',
+    setup() {
+        const [emblaNode] = emblaCarouselVue({ loop: false }, [Autoplay()])
+        return { emblaNode }
+    },
     data() {
         return {
             reviews: [
+                {
+                    profileimg: '/public/img/testimonials-image-1.png',
+                    name: 'Kim Ramos',
+                    location: 'Serbia'
+                },
+                {
+                    profileimg: '/public/img/testimonials-image-2.png',
+                    name: 'Garry Francis',
+                    location: 'Kiribati'
+                },
+                {
+                    profileimg: '/public/img/testimonials-image-3.png',
+                    name: 'Merle Fisher',
+                    location: 'United States'
+                },
+                {
+                    profileimg: '/public/img/testimonials-image-1.png',
+                    name: 'Kim Ramos',
+                    location: 'Serbia'
+                },
+                {
+                    profileimg: '/public/img/testimonials-image-2.png',
+                    name: 'Garry Francis',
+                    location: 'Kiribati'
+                },
+                {
+                    profileimg: '/public/img/testimonials-image-3.png',
+                    name: 'Merle Fisher',
+                    location: 'United States'
+                },
                 {
                     profileimg: '/public/img/testimonials-image-1.png',
                     name: 'Kim Ramos',
@@ -28,22 +64,26 @@ export default {
 }
 </script>
 <template lang="">
-    <div class="col-12 col-md-4 feedback-cards" v-for="rate, index in reviews" :key="index">
-        <div class="stars d-flex gap-1 mb-2">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-        </div>
-        <p class="review">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.”</p>
-        <div class="user d-flex gap-3 align-content-center">
-            <div class="user-img d-flex align-items-center">
-                <img :src="rate.profileimg" :alt="rate.name" class="img-fluid">
-            </div>
-            <div class="user-data">
-                <h6>{{ rate.name }}</h6>
-                <p> {{ rate.location }}</p>
+    <div class="embla" ref="emblaNode">
+        <div class="embla_container d-flex">
+            <div class="col-12 col-md-4 feedback-cards" v-for="rate, index in reviews" :key="index">
+                <div class="stars d-flex gap-1 mb-2">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="review">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.”</p>
+                <div class="user d-flex gap-3 align-content-center">
+                    <div class="user-img d-flex align-items-center">
+                        <img :src="rate.profileimg" :alt="rate.name" class="img-fluid">
+                    </div>
+                    <div class="user-data">
+                        <h6>{{ rate.name }}</h6>
+                        <p> {{ rate.location }}</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -89,5 +129,14 @@ export default {
         font-size: 18px;
         font-family: $font_style;
     }
+}
+
+.embla {
+    overflow: hidden;
+}
+
+.embla__slide {
+    flex: 0 0 100%;
+    min-width: 0;
 }
 </style>

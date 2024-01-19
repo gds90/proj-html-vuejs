@@ -317,6 +317,8 @@ export default {
                         <div class="feedback-header text-center">
                             <Title :titles="titlesSections[5]" />
                         </div>
+                    </div>
+                    <div class="col-12">
                         <div class="feedback-card d-flex justify-content-center">
                             <FeedbackCard />
                         </div>
