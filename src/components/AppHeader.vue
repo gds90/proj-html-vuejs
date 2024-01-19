@@ -11,15 +11,15 @@ export default {
     mounted() {
         window.addEventListener('scroll', this.handleScroll);
     },
-        beforeDestroy() {
+    beforeDestroy() {
         window.removeEventListener('scroll', this.handleScroll);
     },
     methods: {
         handleScroll() {
-        const scroll = window.scrollY;
-        this.isHeaderFixed = scroll >= 60;
+            const scroll = window.scrollY;
+            this.isHeaderFixed = scroll >= 60;
+        },
     },
-  },
 }
 </script>
 
@@ -73,7 +73,7 @@ header {
     position: absolute;
 
     &.fixed {
-        background-color: rgb(28,34,45);
+        background-color: rgb(28, 34, 45);
         position: fixed;
         top: 0;
         left: 0;

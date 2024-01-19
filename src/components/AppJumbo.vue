@@ -20,7 +20,7 @@ export default {
     <div class="jumbotrone position-relative">
         <div class="container">
             <div class="row">
-                <div class="col-7">
+                <div class="col-6">
                     <div class="content">
 
                         <div class="top">
@@ -77,30 +77,31 @@ export default {
     }
 
     button {
-            font-family: $font_style;
-            background-color: $colorgreen;
-            color: $colorblack;
-            border-radius: 25px;
-            font-weight: 600;
-            padding: 10px 20px;
-            font-size: 18px;
-            position: relative;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            margin: 5px;
-            transition: 0.3s all;
+        font-family: $font_style;
+        background-color: $colorgreen;
+        color: $colorblack;
+        border-radius: 25px;
+        font-weight: 600;
+        padding: 10px 20px;
+        font-size: 18px;
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin: 5px;
+        transition: 0.3s all;
 
-            &:hover {
-                background-color: $colorlime;
-            }
+        &:hover {
+            background-color: $colorlime;
         }
+    }
 
 
     .soldier {
         position: relative;
         top: 0;
-        right: 0;
+        right: -5%;
+        width: 60%;
     }
 }
 </style>
