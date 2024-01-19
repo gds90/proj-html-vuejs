@@ -167,9 +167,7 @@ export default {
 <template lang="">
     <main>
         <section>
-
             <AppJumbo :titles= "titlesSections[0]"/>
-            
         </section>
         <!-- SECTION 1 -->
         <section class="background-section-1 pb-120">
@@ -660,4 +658,5 @@ export default {
     .feedback-header {
         margin-bottom: 55px;
     }
-}</style>
+}
+</style>

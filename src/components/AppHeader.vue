@@ -207,7 +207,7 @@ export default {
                             </a>
                         </div>
                         <div class="d-flex justify-content-between w-75 text-capitalize">
-                            <div class="d-flex align-items-center">
+                            <div class="d-flex align-items-center pt-2">
                                 <ul class="d-flex list-unstyled">
                                     <li class="ms-3 d-flex justify-content-center" v-for="link in navBarLinks" @mouseover='link.flag_dropdown = true' @mouseleave='link.flag_dropdown = false'>
                                         <a :class='link.flag_dropdown ? "active" : ""' href="#">{{link.link_name}}</a>
@@ -289,18 +289,19 @@ header {
     }
 
     .border-btn {
-            color: $colorblack;
-            @include btn-border-lime;
-            &::after {
-                position: absolute;
-                content: "";
-                width: 108%;
-                height: 120%;
-                border: 1px solid $colorgreen;
-                padding: 5px;
-                border-radius: 30px;
-            }
+        color: $colorblack;
+        @include btn-border-lime;
+
+        &::after {
+            position: absolute;
+            content: "";
+            width: 108%;
+            height: 120%;
+            border: 1px solid $colorgreen;
+            padding: 5px;
+            border-radius: 30px;
         }
+    }
 }
 
 .list-cont {
