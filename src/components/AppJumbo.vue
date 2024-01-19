@@ -20,7 +20,7 @@ export default {
     <div class="jumbotrone position-relative">
         <div class="container">
             <div class="row">
-                <div class="col-6">
+                <div class="col-6 position-relative">
                     <div class="content">
 
                         <div class="top">
@@ -38,6 +38,7 @@ export default {
                             </a>
                         </div>
                     </div>
+                    <img src="../../public/img/game-controler.png" alt="" class="game-controler">
                 </div>
                 <div class="col-5">
                     <div class="img-container">
@@ -67,15 +68,14 @@ export default {
 
     .row {
         padding-top: 100px;
-        
+
     }
 
-
-    .col-7 {
-
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+    .col-6 {
+        .content {
+            position: relative;
+            z-index: 2;
+        }
     }
 
     button {
@@ -83,30 +83,39 @@ export default {
         background-color: $colorgreen;
         color: $colorblack;
         @include btn-lime;
-            &:hover {
+
+        &:hover {
             background-color: $colorlime;
-            }
-    }
-    .border-btn {
-            color: $colorblack;
-            @include btn-border-lime;
-            &::after {
-                position: absolute;
-                content: "";
-                width: 108%;
-                height: 120%;
-                border: 1px solid $colorgreen;
-                padding: 5px;
-                border-radius: 30px;
-            }
         }
+    }
+
+    .border-btn {
+        color: $colorblack;
+        @include btn-border-lime;
+
+        &::after {
+            position: absolute;
+            content: "";
+            width: 108%;
+            height: 120%;
+            border: 1px solid $colorgreen;
+            padding: 5px;
+            border-radius: 30px;
+        }
+    }
 
 
     .soldier {
         position: relative;
         top: 0;
         right: 0;
-        width: 60%;
+        max-width: unset;
     }
-}
-</style>
+
+    .game-controler {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+
+    }
+}</style>
