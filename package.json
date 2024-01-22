@@ -15,7 +15,8 @@
     "embla-carousel-autoplay": "^8.0.0-rc19",
     "embla-carousel-vue": "^8.0.0-rc19",
     "vue": "^3.3.11",
-    "vue-slick-carousel": "^1.0.6"
+    "vue-slick-carousel": "^1.0.6",
+    "vue3-autocounter": "^1.0.6"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.5.2",

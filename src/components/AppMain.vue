@@ -250,25 +250,25 @@ export default {
                         </div>
                         <div class='col-3'>
                             <div class="box-random">
-                                {{GenerateRandomMajorNumber()}}
+                                <vue3-autocounter ref='counter' :startAmount='0' :endAmount='GenerateRandomMajorNumber()' :duration='2' separator=',' decimalSeparator='.' :autoinit='true'/>
                                 <div class='text-green'>Twitch Streams</div>
                             </div>
                         </div>
                         <div class='col-3'>
                             <div class="box-random">
-                                {{GenerateRandomMinorNumber()}}
+                                <vue3-autocounter ref='counter' :startAmount='0' :endAmount='GenerateRandomMinorNumber()' :duration='2' separator=',' decimalSeparator='.' :autoinit='true'/>
                                 <div class='text-green'>Total Games</div>
                             </div>
                         </div>
                         <div class='col-3'>
                             <div class="box-random">
-                                {{GenerateRandomMajorNumber()}}
+                                <vue3-autocounter ref='counter' :startAmount='0' :endAmount='GenerateRandomMajorNumber()' :duration='2' separator=',' decimalSeparator='.' :autoinit='true'/>
                                 <div class='text-green'>Youtube Streams</div>
                             </div>
                         </div>
                         <div class='col-3'>
                             <div class="box-random">
-                                {{GenerateRandomMinorNumber()}}
+                                <vue3-autocounter ref='counter' :startAmount='0' :endAmount='GenerateRandomMinorNumber()' :duration='2' separator=',' decimalSeparator='.' :autoinit='true'/>
                                 <div class='text-green'>Pro Team</div>
                             </div>
                         </div>
